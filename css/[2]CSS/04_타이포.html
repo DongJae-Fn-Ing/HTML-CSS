@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>글꼴(폰트, 타이포)</title>
+	<style>
+		html{
+			font-size: 16px; line-height: 1.5; /*따로 설정 없이 이렇게 쓰면 행간이 글자 크기의 1.5배로 설정을 해준다 가장기본*/
+			/*글자의 대원칙*/
+			/*기본글자 크기 기준 14px~15px~16px*/
+			/*글자의 크기는 짝수로 설정한다.*/
+			/*행간은 1.5(150%)로 설정을 한다.(배수)*/
+			/*화면 구성의 최소단위: px(물리적인 값 빛을 내는 작은 값)는 쪼갤 수 없음 소수점 불가*/
+			/*예를 들어 15px이 있는데 여기에 정수(짝수)가 나오려면 x짝수를 곱해줘야 한다.*/
+			/*그러나 행간을 1.5로 두면 아무 수를 곱하면 정수(짝수)가 나온다*/
+			
+			
+			font-family: 'Malgun Gothic', sans-serif;
+			/*처음에는 맑은 고딕을 사용해라 그러나 맑은 고딕이 없으면 고딕체를 사용해라*/
+			/*html ""
+			css '' */
+			/*글꼴 이름에 뛰어 쓰기가 있으면 ''생략불가 없으면 생략가능*/
+		}
+		h2{
+			font-size: 30px;
+			font-family: Georgia, 'Times New Roman', Times, serif;
+		}
+		p{
+			font-family: impact, 'HY견고딕';
+			/*한글이랑 영문하고 글꼴 형태가 다르다. impact라는 글꼴은 한글 미적용 글꼴 영문 적용 그래서 impact가 앞에 있아
+			1차적으로 영문 글꼴을 적용하고 한글 글꼴을 적용한다 텍스 강조용으로 사용한다*/
+			/*만약에 한글 폰트 없이 영어 폰트만 적용할 경우 한글은 시스템 폰트로 자동 적용을 한다*/
+		}
+		li{font:bold 14px/1.2 '돋음';}
+/*		li{
+			font-weight: bold;
+			font-size: 14px;
+			line-height: 1.2;
+			font-family: '돋음';
+		}*/
+	</style>
+</head>
+<body>
+<!--웹 컨텐츠에서 중요한 건 텍스트 즉 가독성이다.-->
+<!--글꼴은 크게 두가지 형태로 나눠진다. 세리프 및 산세리프-->
+	<h2>웹 표준 퍼블리싱 <br>(Web Standard Publishing)</h2>
+	<!-- 세리프 출판물에서 많이씀 그러나 웹상에서 눈이 피로해 가독성이 떨이진다. 보조적으로 강조 할 때 최소 25px사용-->
+	<p>웹 디자인의 한 분야로, 웹 콘텐츠 UI 디자인에서 유래되어 UI/UX에 특화된 분야</p>
+	<!--웹에서는 산세리프 즉 고딕체를 많이쓴다. 주 컨텐츠 만들때-->
+	<hr>
+	<h2>글꼴의 기본형</h2>
+	<ul>
+		<li>세리프(serif): 삐침이 있는 글꼴, 명조체</li>
+		<li>산세리프(san=serif): 삐침이 없는 글꼴, 고딕체</li>
+		<li>모노스페이스(monospace): 글자 폭이 일정한 글 고정폭 글꼴</li>
+	</ul>
+	<div>가운데 정렬</div>
+	<style>
+		div{
+/*			글자는 기본적으로 좌측 상단으로 가기 때문에 가운데 정렬을 할 경우 text-align: center랑 line-height을 height값으로 해준다.*/
+ 			width: 100px;
+			height: 100px;
+			background-color: yellow;
+			line-height: 100px;
+			text-align: center;
+		}
+	</style>
+</body>
+</html>

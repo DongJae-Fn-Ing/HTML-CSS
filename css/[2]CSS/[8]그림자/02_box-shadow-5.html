@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>박스 그림자(box-shadwo)</title>
+	<style>
+		div{
+			width: 200px; height: 100px;
+			background-color: gold;
+			text-align: center;
+			line-height: 100px;
+			color: red;
+		}
+	</style>
+	<style>
+		div{
+			box-shadow: 5px 5px 8px 10px #444 inset; 
+			/*x y 불러 그림자크기 색상 옵션값(내부 그림자로 바꾸기)*/
+			/*그림자의 방향이 반전*/
+			/*inset 맨뒤에 써도 좋고 마지막에도 좋다*/
+		}
+	</style>
+</head>
+<body>
+	<div>DIV BOX</div>
+</body>
+</html>

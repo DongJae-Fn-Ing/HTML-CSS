@@ -1,0 +1,45 @@
+body{
+ width: 200px; margin: 200px auto;
+}
+div{
+    width: 200px; position: relative; 
+    transform-style: preserve-3d;
+    animation-name: rotate3D;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+} 
+/*부모에 적용해줘야 하는 값과 
+자식에게 입력을 해줘야 하는 값을 구분
+일단 한바퀴 돌려 놓고 시작을 해라
+부모값에는 직접적인 효과들을*/
+@keyframes rotate3D{
+    from{
+    transform: rotate3d(0,0,0, 0deg);
+    }
+    to{
+    transform: rotate3d(1,1,1, 360deg);
+    }
+}
+/*자식 값에는 효과가 발생하는 수치들을 입력을 한다*/
+div span{
+    width: 200px; height: 100px; display: block;
+position: absolute; left: 0; top: 0; opacity: 0.3;
+}
+div span:nth-of-type(1){
+    background-color: red; transform: rotateY(0deg);
+    transform-origin: left 0 top 0;
+}
+div span:nth-of-type(2){
+    background-color: green; transform: rotateY(60deg);
+    transform-origin: left top ;
+}
+div span:nth-of-type(3){
+    background-color: blue; transform: rotateY(-60deg);
+    transform-origin: right top;
+}
+/*누워있는 3개면이 겹처있어 그중 
+2면만을 움직여 삼각형을 만든다는 개념
+도형이라는 형태를 만들때는 이런식으로
+어떤 것을 만들때는 1면을 건들일이 없다 
+y축으로 회적을 하는지 생각을 해보자 */

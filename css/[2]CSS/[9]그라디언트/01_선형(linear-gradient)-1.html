@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>선형그라디언트(lineat-gradient)</title>
+	<style>
+		div{width: 600px; height: 400px;
+		background-color: orange;}
+	</style>
+	<style>
+		div{
+			background-image: linear-gradient(red, gold); 
+			/*리니어 그라디언트- 선형 그라디언트를 만드는 함수*/
+			/*그라디이션 최소 색상 두개이상*/
+			/*자동으로 위에서 아래로*/
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	
+	<hr>
+	<h2>그라디언트 문법</h2>
+	<fieldset>
+		<legend>gradient</legend>
+		<p>background-image:liner-gradient([방향] 색상1, 색상2, ...,색상n)</p>
+		<h3>호환 브라우저</h3>
+		<ul>
+			<li>크롬: 26+</li>
+			<li>파이어폭스: 16+</li>
+			<li>사파리: 6.1+</li>
+			<li>익스플로러: 10+</li>
+			<li>오페라: 12.1+</li>
+		</ul>
+	  <h3>제조사 접두어(벤더프리픽스; vendor prefix)</h3>
+		<ul>
+			<li>
+			<!--옛방식-->
+				<span><!--크롬, 사파리--></span>
+				<p>background-image: <em>-webkit-</em>linear-gradient(red,gold)</p>
+			</li>
+						<li>
+				<span>파이어폭스</span>
+				<p>background-image: <em>-webkit-</em>linear-gradient(red,gold)</p>
+			</li>
+						<li>
+				<span>오페라</span>
+				<p>background-image: <em>-webkit-</em>linear-gradient(red,gold)</p>
+			</li>
+						<li>
+				<span>익스플로어</span>
+				<p>background-image: <em>-webkit-</em>linear-gradient(red,gold)</p>
+			</li>
+						<li>
+				<span>표준</span>
+				<p>background-image: linear-gradient(red,gold) </p>
+			</li>
+		</ul>
+	</fieldset>
+</body>
+</html>

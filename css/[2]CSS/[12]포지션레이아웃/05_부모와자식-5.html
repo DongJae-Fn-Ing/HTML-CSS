@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>포지션</title>
+	<style>
+		*{margin: 0; padding: 0;}
+		body{background-image: url('http://wooreeweb.com/img/grid.gif');}
+		.parent{
+			width: 300px; height: 300px;
+			border: 3px solid #09f;
+			box-sizing: border-box;
+			/*margin: 50px auto; 못쓴다*/}
+		p{
+			height: 50px;
+			background-color: rgba(220, 210, 60, 0.3);
+		}
+		.child{
+			width: 200px; height: 150px;
+			background-color: rgba(220, 20, 60, 0.3);
+		}
+	</style>
+	<style>
+		.child{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+		.parent{
+			position: absolute; /*역마진 정렬 방법*/
+			left: 50%; /*앱솔루트 상태에서 움직여야 하면 위치 속성값 50% 를주고*/			margin-left: -150px; /*현재박스 너비의 절반을 빼준다 즉 음수 값을 준다. 역 마진을 이용한 가운데 정렬  그러나 정확하진 않다.*/
+		}
+		/*부모 자식 속성이 둘다 absolute여도 자식은 부모를 따른다*/
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<p>블럭 요소</p>
+		<div class="child">.child</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+<body>
+    <table>
+        <caption>month /saving Table</caption>
+    <!--caption은 한상 table 태그 뒤에 바로 따라와야 한다.
+    웹접근성 준수를 위해 해당 테이블이 어떠한 데이터를 나타내는지 표햔-->
+   <colgroup>
+<col width="300px" style="background-color: red;">
+<col width="150px" style="background-color: yellow;">
+</colgroup> 
+<!--열의 스타일을 지정할 때 근데 보통은 css사용-->
+<thead>
+    <tr>
+        <th>Month</th>
+        <th>Saving</th>
+    </tr>
+</thead>
+<!--테이블의 상당부 분류를 표기할 때-->   
+<tfoot>
+    <tr>
+        <td>sum</td>
+        <td>$180</td>
+    </tr>
+</tfoot>
+<!--테이블의 하단부 datd의 총합, 통계등을 표시 할때 html5에서 thead > tfoot > tbody순-->
+<tbody>
+    <tr>
+        <td>January</td>
+        <td>$100</td>
+    </tr>
+    <tr>
+        <td>February</td>
+        <td>$80</td>
+    </tr>
+</tbody>
+<!--실질적 데이터가 들어가는 공간 thead나 tfoot는 상황에 따라 사용을 안할 수 있지만 tbody는 테이블에서 반드시 사용되며 
+tbody만 있는 경우 마크업을 생략 가능하다.-->
+</table>
+
+</body>
+</html>

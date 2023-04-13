@@ -1,0 +1,65 @@
+*{
+    margin: 0; padding: 0;
+}
+.wrap{
+    width: 960px; margin: 0 auto;
+}
+.wrap header{
+    background-color: mediumaquamarine;
+    }
+.wrap header:after{
+    content: ''; display: block; visibility: hidden; clear: both;
+}
+.wrap header h1,
+.wrap header nav{
+    float: left;
+}
+.wrap header h1{
+    background-color: mediumpurple;
+    text-align: center;
+    color: mediumturquoise;
+    width: 260px;
+    line-height: 55px;
+    margin-left: 350px;
+}
+    
+
+.wrap header nav{
+    background-color: plum; width: 960px;
+    
+}
+.wrap header nav ul{
+    text-align: center;
+    
+}
+.wrap header nav ul li{
+    display: inline-block;
+    }
+.wrap header nav ul li a{
+    color: mediumpurple; display: block; line-height: 55px;
+}
+section::after{
+    content: ''; display: block; visibility: hidden; clear: both;
+}
+section h2{
+    background-color: white;
+    margin-top: -4px;
+    /* 헤더에서 4px정도 오류나서 이미지에는 css적용하지 말 것
+    그래서 section h2에 적용을 하니 해결은 했는데 
+    오류의 이유를 모르겠습니다 */
+}
+section article{
+    width: 318px; float: left;
+    border: solid 1px black;
+    }
+section article h3{
+    line-height: 40px;
+    font-weight: normal;
+}
+section article ul li{
+    display: block; font-size: 16px;
+}
+footer{
+    text-align: center; background-color:#145caf;
+    color: white; line-height: 55px;
+}

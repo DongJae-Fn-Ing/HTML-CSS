@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>애니메이션</title>
+	<style>
+		*{margin: 0; padding: 0;}
+		.box{
+			width: 100px; height: 100px;
+			background-color: gold;
+			position: absolute;
+			top: 50%; margin-top: -50px;
+			left: 50%; margin-left: -50px;
+		}
+		/*1 키프레임생성*/
+		@keyframes mov{
+			0%{
+				100px; height: 100px;
+				background-color: gold;
+			}
+			25%{
+				width: 200px; height: 200px;
+				background-color: #060;
+				border-radius: 50%;
+				margin-left: -100px; margin-top: -150px;
+			}
+			50%{
+				width: 200px; height: 200px;
+				background-color: #cd0;
+				border-radius: 0;
+				margin-left: -150px; margin-top: -150px;
+			}
+			75%{
+				width: 200px; height: 200px;
+				background-color: #0c0;
+				border-radius: 50%;
+				margin-left: -100px; margin-top: -150px;
+			}
+			100%{
+				width: 100px; height: 100px;
+				background-color: gold;
+			}
+		}
+		.box{ animation: mov2 4s infinite alternate;} /*여기에 리니어를 붙인다*/
+	</style>
+	<style>
+		@keyframes mov2{
+			50%{ /*0%없는 이유가 처음 상태에서 이렇게 바꾼다*/
+				background-color: yellowgreen;
+				transform: scale(2) rotate(765deg); /*두배로 커지면서 회전*/
+			} /*역마진 필요 없는 이유 트랜스폼이 기본 도형의 중앙이 기준점이기 떄문*/
+		 100%{
+				background-color: coral;
+				transform: scale(3) rotate(-765deg); /*-역회전*/
+			} /*애니메이션 타이밍 펀션 기본 값 떄문에 속도 일정하지 않다 그래서*/ 
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

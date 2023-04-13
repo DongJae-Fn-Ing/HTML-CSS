@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>포지션</title>
+	<style>
+		*{margin: 0; padding: 0;}
+	body{
+		background-image: url('http://wooreeweb.com/img/grid.gif');
+	}
+	</style>
+	<style>
+		p{
+			height: 50px;
+			background-color: rgba(255, 215, 0 ,0.3);
+		}
+		.box{
+			width: 200px; height: 150px;
+			background-color: rgba(220, 20, 60, 0.4);
+		}
+</style>
+<style>
+	.box{
+		bottom: 0px;
+		right: 0px;
+		position: absolute;
+/*		부모 요소의 포지션을 기준으로 이동
+		부모 요소의 포지션이 static이면,
+		static이 아닌 요소를 만날때까지 조상 요소로 올라가면서 기준을 찾음*/
+	}
+	/*위치 이동 속성
+	top 위쪽을 기준으로 아래로 이동
+	bottom 아래쪽을 기준으로 위로 이동
+	right 오른쪽을 지군으로 완쪽으로 아동
+	left 왼쪽을 기준으로 오른쪽으로 이동*/
+	</style>
+	<style>
+		body{height: 3000px;}
+		.wrap{height: 3000px; position: relative;}
+		/*부모의 영역이 스태틱이 아니어서 .wrap가 기준이다*/
+		/*앱솔루트는 어느 영역만큼 돌아다닌다*/
+	</style>
+</head>
+<body>
+	<p>블럭요소 p</p>
+	<div class="wrap"><!--// p의 밑에이다-->
+	<div class="box">.box</div>
+		</div>
+</body>
+</html>

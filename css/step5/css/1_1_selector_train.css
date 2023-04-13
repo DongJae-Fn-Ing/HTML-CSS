@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+}
+article{
+    max-width: 1000px; margin: 0 auto;
+    /*overflow:hidden*/
+}
+/* 공통적인 것은 선언 */
+/* css에 공통적인 코드랑 디자인을 정리해봐라 */
+/* 오버플로 히든을 주면 애프터 캔슬잉랑 같지만 쓰지마라 */
+article:after{
+    content: ''; display: block; visibility: hidden; clear: both;
+}
+
+article:not(:last-of-type){
+    margin-bottom: 30px;
+}
+/* 맨 마지막 아티클 미적용 */
+/* max 하이트, 맥스 위스 최대 높이와 너비
+min 하이트, 민 위스 최소 높이와 너비 */
+article > *:first-child{
+    float: left; width: 150px; line-height: 110px;
+    font-size: 100px; background-color: gray; color: white;
+    text-align: right; margin: 0 20px 10px 0;
+}
+/* 창의 크기를 줄였는데 h와 p 둘다 모양을 유지하려면 둘다 박스화를
+실시하고 만약 위에 예제처럼 모양을 하나만 유지할 경우 하나만
+박스화 */
+/* p태그에 플로트 래프트를 하냐 안하냐 */
+/* 반응형 웹을 만들 때에는 태블릿 모발일 시안을 요구해라 */
+/* p태그는 글자가 있어서 줄간이 있다
+공간에는 라인 하이트가 있어서 항상 간섭을 일으킨다
+margin: 0 20px 10px 0; 
+여기서 처럼 앞의 값에 반값을 넣어준다*/
+article > p{
+    font-size: 14px;
+}
+/* 이런식으로 적용하고 css가 안들어가는 부분이 있다면
+삭제를 해준다.
+티폴트 값 16px */
+article > p > *:first-child{
+    color: #09f;
+}
+/* 전체 공통적용 */
+/* 여기다가 아래의 백그라운드 컬러 트랜지션을 입력해도 괜찮다 */
+article > p > mark{
+    background-color: transparent;
+}
+/* 스타일의 방식 깃의 방식을 추가해봐 */
+article > p > *:first-child:not(mark){
+    text-decoration: underline;
+}
+/* 특정부분을 제외 */
+
+/* 노클래스 노아이디 위에 방식 코드의 장점이자 단점은
+작성자가 아니면 손을 못된다
+즉 회사에서 너를 못 자른다 이 방식을 선호해라 */
+
+/* 인생팁 한달에 40만원씩 저축을 해서 석사를
+따라 학력 세탁을 할 때 5000만원 정도 든다 */

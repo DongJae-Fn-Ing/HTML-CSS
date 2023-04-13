@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>플로팅</title>
+	<style>
+		#container{border: 5px solid;}
+		.box1, .box2{
+			width: 100px; height: 100px;
+			border: 5px solid crimson;
+			margin: 10px;
+		}
+		.box3{ border: 5px solid #06f;}
+	</style>
+	<style>
+		.box1, .box2{float: left;}
+	</style>
+	<style>
+		.clear{clear: both;}
+	</style>
+	<style>
+		.clear:after{
+			content: '';
+			display: block;/* table를 쓰는 사람도 있다*/
+			/*visibility: hidden;*/
+			clear: both;
+		}
+		/*css클리어 픽스 / 애프터 캔슬러*/
+		/*div conyainer 안 맨뒤에 들어가서 가상의 콘텐츠를 만들고 그 뒤로 클리어 요소를 사용해라*/
+		/*float가 적용된 콘텐츠에 부모요소한테 클리어를 해줘라*/
+		
+    /*또다른 방법으로 부모 값에 overflow: hidden을 주는 사람도 있다
+		우연히 발견 그러나 문제는 부모요소의 크기를 지정하면 자식요소들이 짤리는 경우가 많다 그래서 비*/
+		/*안쓰면 부모가 높이를 못잡음*/
+	</style>
+</head>
+<body>
+	<h2>FLOAT 속상이 형제(인접) 요소에 영향을 주는 경우</h2>
+	<hr>
+	<div id="container" class="clear">
+	<!--부모요소한테 클리어하는 클래스를 부여하고 css를 새로준다.-->
+	<div class="box1">box1</div>
+	<div class="box2">box2</div>
+	</div>
+	<div class="box3 clear">box3</div>
+</body>
+</html>

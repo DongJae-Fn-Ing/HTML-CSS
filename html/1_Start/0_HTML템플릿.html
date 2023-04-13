@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <form action="">
+    <input type="text" id="id">
+    <button id="btn" type="button">제출</button>
+  </form>
+
+  <script>
+    let inta = 0;
+    document.getElementById('btn').addEventListener('click',function(){
+      let input = document.getElementById('id').value;
+      inta ++;
+      if(input=='1335'){
+        alert("정답");
+      }else if(inta>=3&&input!='1335'){
+        alert("멍청이");
+      }
+      console.log(inta);
+    });
+
+    var 예금액 = 10000;
+    var 미래 =0;
+
+    if(예금액 >= 60000){
+      미래 = 예금액*1.2*1.2; 
+    }else{
+      미래 = 예금액*1.15*1.15;
+    }
+
+    console.log(미래);
+  </script>
+</body>
+</html>

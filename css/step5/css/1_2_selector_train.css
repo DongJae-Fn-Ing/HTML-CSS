@@ -1,0 +1,67 @@
+body{
+    margin: 0; 
+}
+article{
+     margin: 0 auto; 
+}
+
+body > article:not(:last-of-type){
+    margin-bottom: 10px;
+}
+body > article:after{
+    content: ''; display: block; visibility: hidden; clear: both;
+}
+/* article >h1,h3:first-child{
+    float: right; width: 44.44%; line-height: 110px;
+    font-size: 150px; background-color: gray; color: white;
+    text-align: right; margin: 0 20px 10px 0;
+}
+article >h2,h4:first-child{
+    float: left; width: 44.44%; line-height: 110px;
+    font-size: 150px; background-color: gray; color: white;
+    text-align: left; margin: 0 20px 10px 0;
+} */
+
+article > *:first-child{
+    font-size: 200px; width: 40%; line-height: 140px;
+    background-color: gray; color: white;
+}
+/* 부모기준 차일드 
+지들끼리 오브 타입 */
+/* 폰트 사이즈가 라인하이트보다 크면 깔려들어간다 */
+
+/* 신텍스 ==수열 */
+
+article:nth-child(even) > *:first-child{
+    float: left; 
+    text-align: left; margin: 0 20px 10px 0;
+}
+/* article:nth-child(2n) */
+
+/* body article :nth-child(odd) > *:first-child{
+
+} 이런식으로 하면 아티클 안에서 잡는다 ntn을 잡아낸다 */
+
+
+
+article:nth-child(2n+1) > *:first-child{
+    float: right; text-align: right; margin: 0 0 10px 20px;
+    }
+/* article:nth-child(odd) */
+
+/* 코드에 문제가 없는데 자꾸 내가 원하는 화면이 안나올 경우 margin 값을 의심 */
+article > p{
+margin: 0 0 10px 0;
+}
+
+article > P > *:not(mark){
+background-color: transparent;
+}
+
+article > p >mark{
+background-color: transparent;
+}
+
+article P > *{
+color: #09f; text-decoration: underline;
+}

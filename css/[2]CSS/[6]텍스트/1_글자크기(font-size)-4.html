@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>글자크기(font-size)</title>
+	<style>
+		html{font-size: 16px;} /*rem은 무조건 최상위의 html의 값을 쓴다. 최근들어 많이 쓴다. 반응형을 만들때 사용*/
+		h1{font-size: 2.5rem;} /*40px.16px==2.5*/
+		h2{font-size: 1.875rem;} /*30px/16px=1.875*/
+		.sm{font-size:0.875rem;} /*14px/16px=0.875*/
+		.lg{font-size:1.125rem;} /*18px/16px=1.125*/
+	</style>
+<!--	rem 단위(root em)
+	chltkddnl(root) 부모(html) 요소의 글자 크기에 대한 배수 DOM트리의 복잡도와 곤계없이 html에 설정된 글자 크기에
+	대한 비율로 조정됨-->
+	<style>
+		div{font-size: 2em;}
+	</style>
+</head>
+<body>
+	<h1>헤딩1</h1>
+	<h2>헤딩2</h2>
+	<p>기본 문단p</p>
+	<p class="sm">클래스 이름이 sm인 p</p>
+	<p class="lg">클래스 이름이 lg인 p</p>
+	<div>
+<p class="sm">클래스 이름이 sm인 p</p>
+<p class="lg">클래스 이름이 lg인 p</p>		
+	</div>
+</body>
+</html>

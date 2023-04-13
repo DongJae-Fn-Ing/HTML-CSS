@@ -1,0 +1,58 @@
+html,
+body{
+    height: 100%;
+}
+body{
+    margin: 0; padding: 0;
+}
+
+div{
+    height: 100%;
+    background-image: url('../images/BackgroundFront.png'), url('../images/BackgroundBack.png');
+    background-size: 100% 250px; /*사이즈 조절 배경을 100%로 고정*/
+   
+    /*background - size: 100%, 50%; 생각을 해봐*/
+    
+    /*background - size: 100% 50%; 위스 화이트 전환*/
+    
+    /*리피트가 없어서 +가 생긴다?*/
+   
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;/*스크롤을 영역에 탈주
+    즉 스크롤이 내려가면 이미지도 같이 내려간다.*/
+}
+
+/*div를 body로 바꿔본다*/
+
+/* , 의 감을 익혀라*/
+
+/*기능이라는 건 내가 끄지 않는 한 무조건 살아있고
+내가 보여줄 수 없는 환경이면 들어나지 않지만
+무조건 작동을 하고 있다. 예시) 하이트를 늘리면
+종회비 개념 때문에 위드가 늘어난다 이 개념을
+생각해라 */
+
+/*기능은 너가 두개를 넣으면 값을 공유한다 디폴트적으로
+background-image url,url에 이미지를 두개를 넣고
+bockfrounf-size 에 하나의 수치를 넣으면 size 값을
+공유*/
+
+/*백그라운드 이미지는 중접되서 쌓인다는 개념을 생각해라*/
+p{
+    height: 2000px;
+}
+/*아는 태그가 나오면 바로 라이브서버에 토스트하고 알트 탭으로
+코드를 확인하지 말고 출력되는 화면이 어떻게 나오는지 머리로 생각을
+해보고 출력을 하는 훈련을 해라*/
+
+/*동적요소 - 기능을 만들기 위해 세세한 기능을 만들게
+하는 것을 만들어준다.
+
+인티렉티브 == 화려한 것, 활동적인, 상호보완적인, 
+             쌍방향,입출력가능
+패럴래스 == 사람의 눈을 가지고 장난치는 개념? 웹에서는
+           마우스를 움직이면 효과가 발생하는 등등
+패럴래스 웹?
+
+*/

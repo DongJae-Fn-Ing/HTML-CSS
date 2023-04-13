@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내비게이션</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- cdm 컨텐츠 딜리버리 미디어 방식 트래픽 분산과 업데이트 빠르게
+  하는 방식 구체적으로 내가 사용할 것 --> 
+  <!-- f1를 누르고 >cdnjs 입력 후 서치 포 라이브러리 엔터 후 font awesome 입력 후 엔터 그 다음
+  원하는 버전을 선택해서 써라 일단 4.7 쓰고 그다음 min(미니파이== 용량이 작은 것).css 인
+   것을 고르고 다시 엔터 후 첫번째 바로 쓰기 두번째는 클립보드에 저장 -->
+  <style>
+      *{margin: 0; padding: 0;}
+  li{list-style: none;}
+  a{text-decoration: none; color: #444;}
+
+  body{
+    background-image: url('http://wooreeweb.com/img/grid.gif');
+  }
+  body *{ box-sizing: border-box;}
+  </style>
+  <style>
+    html, body{ height: 100%;}
+    nav {
+     width: 150px;
+      height: 100%; /* 전체 높이 사용-세로형 */
+
+      /* 영역 확인용 테두리와 배경 - 나중에 제거 */
+      border: 1px solid red;
+      background-color: rgba(255, 200, 0, 0.3);
+    }
+    #gnb li{
+      height: 50px;
+      background-color: #09f;
+      border-bottom: 1px solid #eee; /* 메뉴구분선 */
+    }
+    #gnb li:last-child{border-bottom: none;}
+    #gnb li a{color: #fff;}
+
+    #gnb > li > a{
+      display: block; height: 100%;
+      font-size: 25px; line-height: 2;
+      text-indent: 10px;
+    }
+
+    #gnb li:hover{background-color: #06f;}
+    #gnb li{transition: all 0.6s;}
+  </style>
+  <style>
+    #gnb li{position: relative;}
+    #gnb > li > a{text-align: center;}
+
+    #gnb a span,
+    #gnb a i{
+      text-indent: 0; display: block;
+      position: absolute; width: 100%;
+      font-size: 40px; line-height: 1.2;
+      padding-top: 1px;
+    }
+    #gnb a span{opacity: 0;} /* 눈에서만 안보이게 한다 스크립리더가 읽게 하도록 */
+    nav{width: 50px;}
+  </style>
+</head>
+<body>
+  <nav>
+  <ul id="gnb">
+    <li><a href="#"><span>메뉴1</span><i class="fa fa-facebook"></i></a></li> 
+    <!-- fa로 시작해서 4점대 버전 -->
+    <li><a href="#"><span>메뉴2</span><i class="fa fa-instagram"></i></a></li>
+    <li><a href="#"><span>메뉴3</span><i class="fa fa-pinterest"></i></a></li>
+    <li><a href="#"><span>메뉴4</span><i class="fa fa-youtube"></i></a></li>
+    <li><a href="#"><span>메뉴5</span><i class="fa fa-vimeo"></i></a></li>
+  </ul>
+</nav>
+</body>
+</html>

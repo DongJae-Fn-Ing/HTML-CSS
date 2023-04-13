@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>z-index</title>
+	<style>
+		.frame{
+			width: 600px;
+			position: relative;
+			border:  5px solid;
+			overflow: hidden;
+			margin: 10px auto;
+		}
+		.frame img{ width: 100%;} 프레임 너비를 맞춘다.
+	</style>	
+		<style>
+		.frame img{ position: absolute; top: 0; left: 0;
+		z-index: -1;}
+/*			z-index 앞뒤 순서를 잡아준다 수치가 크면 클 수록 앞으로 나온다
+			        -1은 배경으로 고정을 한다
+			z-index 0은 기본값
+			z-index는 static 상태에서 적용 불가
+			z-index 값을 부여 할 때는 일반적으로 10단위 값을 부여해준다.
+			1씩 부여하면 수정하기 힘들다.
+			제일 앞으러 할때는 
+			z-index: 9999나 99999*/
+		.frame {height: 400px;}
+	</style>
+</head>
+<body>
+	<div class="frame">
+		<img src="http://wooreeweb.com/img/h05.jpg" alt="">
+		<h2>h2 TEXT</h2>
+	</div>
+</body>
+</html>

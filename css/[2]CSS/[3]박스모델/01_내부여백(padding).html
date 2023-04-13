@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+	<!--뷰포트 메타테그 모바일 화면전환 시 동일한 크기-->
+	<title>01_내부여백(padding)</title>
+	<style>
+		*{margin: 0; padding: 0;} 
+		/*padding 내부*/ 
+		/*영역 자체가 커진다*/
+		body{
+			background-image: url('http://wooreeweb.com/img/grid.gif');
+		}
+		div{
+			width: 50px; height: 50px;
+			background-color: rgba(230, 115, 230, 0.4);
+			position: absolute;
+		}
+		#box1{top: 0;}
+		#box2{top: 100px;}
+		#box3{top: 200px;}
+		#box4{top: 300px;}
+		#box5{top: 400px;}
+	</style>
+	<style>
+		#box1{padding-top: 10px;
+			padding-bottom: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		#box2{padding: 10px;} /*모든 4개의 변에 한번에 10px를 줘라*/
+		#box3{padding: 10px 20px;} /*x축(상하) y축(좌우)*/
+		#box4{padding: 10px 20px 30px;} /*상, 좌우, 하*/ /*잘 안씀*/
+		#box5{padding: 10px 20px 30px 20px;} /*상 우 하 좌 , 탑 라이트 바텀 레프트*/
+	</style>
+</head>
+<body>
+	<div id="box1">box1</div>
+	<div id="box2">box2</div>
+	<div id="box3">box3</div>
+	<div id="box4">box4</div>
+	<div id="box5">box5</div>
+</body>
+</html>

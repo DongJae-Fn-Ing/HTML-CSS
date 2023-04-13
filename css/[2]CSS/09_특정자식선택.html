@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>특정자식선택</title>
+	<style>
+		li:first-child{color: red;} /*li중 첫번째*/
+		li:nth-child(1){ background-color: yellow;} /*li중 첫번째*/
+		li:nth-child(3){ background-color: yellowgreen;} /*li중 세번째*/
+		li:nth-last-child(3){color: violet;} /*li중 뒤에서 3번째*/
+		li:last-child{color: green;} /*li중 마지막*/
+		/*nth-child(even) 짝수만
+		nth-child(odd) 홀수만*/
+	</style>
+</head>
+<body>
+	<ol>
+		<li>아이템-1</li>
+		<li>아이템-2</li>
+		<li>아이템-3</li>
+		<li>아이템-4</li>
+		<li>아이템-5</li>
+		<li>아이템-6</li>
+	</ol>
+</body>
+</html>

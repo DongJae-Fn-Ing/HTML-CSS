@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html5에 새로 추가된 tag</title>
+</head>
+<body>
+    <figure>
+        <img src="https://via.placeholder.com/250" alt="imgExample">
+        <figcaption>
+        <dl>
+            <dt>example Name</dt>
+            <dd>example</dd>
+            <dd>example</dd>
+        </dl>
+        </figcaption>
+    </figure>
+    <time datetime="2016-06-12T09:00:00Z">2010년 6월 10일 오전 9시</time>
+    <!--날짜와 시간을 기록하는 마크업은 time 직접 입력을 해줘야 한다.
+     1.dotetime은 브라우저에 인식하는 날짜이다. yyyy-mm-dd식으로 인식
+     2.날짜만 2016-06-12 시간만 09:00:00 z는 그리니치 시간대를 나타내는 zuzu약자
+     3.pubdate(문서작정날짜)는 삭제
+     4.브라우저에 표시될 내용-->
+<progress value="22" max="100"></progress>
+<!--progress 태그는 나타내고픈 진행 상황을 실시간으로 나타낼때 사용 값을 value로 설정하고 max로 설정한다. ie10이상지원
+로딩의 기준을 정하고 로딩이 몇퍼센트가 진행인지 즉 로딩바 표현 여기서 value는 데이터를 담고 있다. 현재 상황을 나타내고 직접 작성-->
+<meter value="80" max="100" min="10" high="90" low="20">    
+</meter>
+<!--진행중인 상황을 progress가 담당을 한다면 meter는 현재 사용량이나 소모된량 등의 정지된 산출값에 적합하다. 
+vaule는 현재값, min 최솟값 max 최대값 low낮다의 범위 high는 높다의 기준범위 optimum적당하다의 기준범위
+스테이더스를 체크하는 태그, 실시간 측정이 아닌 갱신 예를 들어 내 컴푸터의 디스크 용량 생각-->
+<ruby>
+    漢<rt>かん</rt>
+</ruby>
+<!--일본어를 사용 할 시에 일반적인 읽기와 다른게 읽는 경우 rt를로 해당부분을 처리해준다. 이외 부가 문장 rp로 처리-->
+
+
+<address>
+    <a href="https://www.naver.com/" target="_blank">
+    userName
+    </a>
+    mailto:
+    <a href="mailto: rkehdwo48@gmail.com">
+       add
+    </a>
+</address>    
+<!--address tag안에는 제작자 및 회사의 연락처 정보 (메일,실제주소,전화번호)와 피드백을 보낼 수 있는 정보 등을 담아낼 수 있다.
+만일 우편번호등  만 기재해야 한다면, p를 사용하면 됨
+-p.s- 마이크로포맷으로 작성되는 vcard 형식은 http://microformats.org/code/hcard/creator 에서 만들어서 사용하면 된다.
+            vcard란 전자명함을 뜻하며, 안드로이드 와 ios 에서 범용적으로 사용되는 연락처 방식이기도 하다.-->
+
+
+
+<!--이 밑으로 ie지원불가 엣지가 가능한 경우가 있음-->
+
+<details>
+<summary style="cursor: pointer;">Copyright 1999-2014.</summary>
+<p> - by Refsnes Data. All Rights Reserved.</p>
+<p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+</details>
+<!--어떠한 한 키워드(summary)의 요약 및 요소를 넣어두고 event (클릭, 오버)로 show / hide 기능이 작동돠게 함-->
+
+<ul>
+    <li><bdi>hrefs</bdi>: 60 points</li>
+    <li><bdi>jdoe</bdi>: 80 points</li>
+    <li><bdi>إيان</bdi>: 90 points</li>
+</ul>
+<!--bdi 태그는 외부 텍스트와 다른 텍스트로 규정되는 텍스트를 분리하는데 사용한다(다국어 지원)-->
+
+<form action="demo_keygen.asp" method="get">
+Username: <input type="text" name="security"> 
+Encrypition: <keygen name="security">
+<input type="submit">
+</form>
+<!--개발쪽 보안에 주된 사항이고 보안키를 생성해내고 
+공개 키를 제출하는데, 개인 키는 로컬에 저장되게 하고,
+공개 키를 서버에 저장시킨다. -->
+
+<main>
+    <h1>Web Browsers</h1>
+    <p>Google Chorme, Firefox, and Internet Explore are the most used browsers today.</p>
+
+    <article>
+        <h2>Google Chorme</h2>
+        <p>
+            Google Chorme is a free, open-source Web Browsers developed by Google,
+            released in 2008
+        </p>
+    </article>
+</main>
+<!--현대 ie12에는 지원하나 그 이하 ie버전에는 지원불가 즉 엣지에 지원가능
+문서내 mainpage에 해당하는 세션부나 페이지를 감쌀 때 사용 . 한개 문서내 한번만 사용
+구조상 최상위에 존재 해야한다.-->
+
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+0
+<input type="range" id="a" value="50">100
++<input type="number" id="b" value="50">
+=<output id="x" name="x" for="a b"></output>
+
+<!--form에 지정된 스크립트 연산을 지정 input(id)들로 수행하여,
+결과값은 산출해내는 식이다.
+range는 값을 마우스를 이용해 입력할 수 있고, number는 직접입력 및 up, down버튼을 이용해 입력할 수 있다.-->
+</form>
+<!-- ! 이하 IE7,8,9, safari 지원 불가-->
+<input list="browsers" />
+<datalist id="browsers">
+<option value="Internet Explore">IE</option>
+<option value="Firefox">FF</option>
+<option value="Chorme">CR</option>
+<option value="Opear">O</option>
+<option value="safari">SF</option>
+</datalist>
+<!--selcet와 유사함. 입력요소에 대한사전 정의 목록을 넣어두는데 활용
+동시에 사용자가 입력필드에 해당 옵션일부를 작성하면 일치되는 결과 값을 출력(자동완성기능)-->
+
+
+
+<!--대부분 브라우저 지원불가-->
+
+<table>
+    <tr>
+        <th>January <dialog open>This is an open dialog window</dialog></th>
+        <th>February</th>
+        <th>March</th>
+    </tr>
+    <tr>
+        <td>31</td>
+        <td>28</td>
+        <td>31</td>
+    </tr>
+</table>
+
+<!--해당 객체의 간단한 대화상자를 생성해 낼 수있다. 
+    open 값을 제하면, 안보이고
+    넣으면 보인다. 크롬, 오페라만 지원-->
+<div style="background-color:yellow; border:1px solid #cccccc; padding: 10px;" contextmenu="mymenu">
+    <p>Right-click inside this box to see the context menu!</p>
+    <menu type="context" id="mymenu">
+        <menuitem label="Refresh" onclick="window.location.reload();" icon="ico_reload.png"></menuitem>
+        <menu label="Share on...">
+            <menuitem label="Twitter" icon="ico_twitter.png"
+                      onclick="window.open('//twitter.com/intent/tweet?text='+window.location.href);"></menuitem>
+            <menuitem label="Facebook" icon="ico_facebook.png"
+                      onclick="window.open('//facebook.com/sharer/sharer.php?u='+window.location.href);"></menuitem>
+        </menu>
+        <menuitem label="Email This Page"
+                  onclick="window.location='mailto:?body='+window.location.href;"></menuitem>
+    </menu>
+</div>
+<!--FF 8.0이상 지원 나머진 지원 불가
+        1.contextmenu는 browser상에서 우클릭
+        2. 호출메뉴의 이름은 ID
+        3. menu로 item을 grouping 하고 호출될 ID 부여
+        4. menuitem에 label로 항목 표기를 하고, 이벤트 및 출력데이터 선언    
+    -->
+<!-- w3c== validator.w3.org html 오류 검사 -->
+<!-- www.wha.or.kr 웹 접근성의 구체적인 내용을 알고 싶으면 여기로 웹 접근성 연구소 -->
+</body>
+</html>

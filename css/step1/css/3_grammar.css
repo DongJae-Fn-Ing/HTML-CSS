@@ -1,0 +1,97 @@
+body{
+    margin: 0; padding: 0; font-size: 12px; color: #60f;
+}
+h1{
+    font-size: 14px; color: #f03;
+}
+img{
+    width: 150px; height: 150px; border: 1px solid #3f3;
+}
+/* 각각 대상을 지목하여  style을 설정*/
+/*body에 이렵을 시킬때는 엄청 신중해야 한다
+
+margin;>> 내 기준 밖으로 나간다. 내 기준의 외부 여백
+정사각형이 있으면 사각형 밖의 여백
+
+padding;>> 내 기준 안으로 나간다. 내 기준 안에 내부 여백
+정사각형이 있으면 사각형 안의 여백
+
+폰트는 12px가 기본 그 미만으로 쓰지 말 것
+
+치는 방식은 이런 식으로 아직 초보니깐
+
+width == 너비 하이트height ==높이
+하이트height 많이 쓰면 수직 정렬 맞추기가 힘들다
+특히 이미지에서 종횡비를 따지는데 강제로 하이트를 
+지정해주면 비율이 깨져버리니 절대 쓰지마라
+border는 테두리 1px는 두께 solid는 선종류
+헥스코드
+여기서 보더는 숏엔드 방식(대부분 개발 프로그램은 숏엔드 코드가 있다
+자바에서는 이에스)
+*/
+
+
+
+
+
+
+/*그루핑*/
+
+
+ul,
+ol,
+dl{
+    list-style: none; color: #f00;
+}
+
+/*이런식으로 치는거 연습해라 너가 숙달하기 전까지
+ul,o,dl의 블릿이 없어진다
+list-style:0 == 스텐바이 상태 초기화 상태 일단 그리신 했다는
+개념 나중에 입력을 받을 수 있다.
+list-style:none == 애시당초 태어나지 않은 상태 */
+/*동일한 규칙의 스타일을 여러 대상에 동시에 설정 그루핑*/
+
+
+/*
+ul li,
+ol li{
+    list-style: none; color: #f00;
+}
+이딴식으로 치지마라 li는 이미 받을 준비가 되있는데
+이딴식으로 치면 li가 인가 하기 때문에 li가 100번
+사용되면 100번 인가하기 때문에 진짜 비효율*/
+
+
+ul li{
+    font-size: 15px; font-weight: bold;
+}
+/*ul의 li*/
+ol li{
+    font-size: 20px; text-decoration: underline;
+}
+/*ol의 lo*/
+
+/*큰거부터 보고 작은 것을 본다*/
+
+/*fort-weight 숫자형
+기본폰드는 400 >> 디자인 담당자한테는 레귤러라고 전달
+값이 작아지면 작아질수록 폰트가 얇아진다.
+100 신
+200 ..세미라이트
+300 라이트
+400 레귤러
+500 미디움
+600 ..세미 볼드
+700 볼드
+800 ..세미 블랙
+900 익스트림볼드/블랙
+*/
+/*text-decoration: underline 아랫 밑줄
+  text-decoration: middlelime 중앙 밑줄
+*/
+
+dl.dt
+dl.dd{
+    font-size: 35px; font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*하위 대상에 동일한 규칙 스타일 적용 예*/

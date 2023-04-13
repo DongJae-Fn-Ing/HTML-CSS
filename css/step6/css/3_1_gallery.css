@@ -1,0 +1,98 @@
+body{
+    margin: 0; background-color: #333;
+}
+/* 창을 키웠을 때 한도 끝도 없이 늘어나면 맥스 위스가 없다 */
+.wrap{
+    width: 70%; margin: 0 auto;
+}
+
+.wrap a{
+    text-decoration: none; display: block;
+}
+
+/* a태그가 인라인 블럭인 이미지를 감쌀 수 없는데 이러면 블럭을 전환을 해줘야한다 */
+
+.wrap ul {
+    margin: 0; padding: 0; list-style: none;
+}
+
+.wrap header{
+    margin-bottom: 90px; position: relative; padding: 20px 40px 0 0;
+}
+
+.wrap header h1{
+    color: #fff;
+}
+
+.wrap header nav{
+    position: absolute; right: 0; top: 25px; width: 40%;
+}
+
+.wrap header ul{
+    border-width: 1px 0; border-style: solid none; border-color: #555;
+}
+
+.wrap header nav ul:after{
+    content: ''; display: block; visibility: hidden; clear: both;
+}
+
+.wrap header nav ul li{
+ float: left; width: 20%; display: block; min-width: 50px;
+ padding: 10px 0;
+}
+/*보더가 가지고 있는 값을 생각을 하고 다시 한번 해봐라*/
+.wrap header nav ul li a{
+    color: white; font-size: 12px;  text-align: center; display: block;
+    
+}
+
+.wrap header nav ul li:not(:first-child) a{
+border-left: 1px solid #eaeaea; 
+}
+
+/*이거 질문 라인정렬*/
+
+
+.wrap ul.picList:after{
+    content: ''; display: block; visibility: hidden; clear: both;
+}
+.wrap ul.picList li{
+    width: 30%; float: left; margin-bottom: 5%;
+}
+.wrap ul.picList li:not(:nth-child(3n+1)){
+    margin-left: 5%;
+}
+.wrap ul.picList li a img{
+    width: 100%; border: none; opacity: 0.5;
+    transition-duration: 0.75s;
+}
+.wrap ul.picList li a:hover img{
+    opacity: 1;
+}
+/* opacity: 1 == 100% 
+opacity: 0.5 == 50%*/
+
+.wrap footer{
+font-size: 12px; text-align: center; color: #a1a1a1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* opacity: 1 == 100% 
+opacity: 0.5 == 50%*
+효과를 줄때 밝기를 낮춰줘라/

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>트랜지션</title>
+	<link rel="stylesheet" href="css/common.css">
+	<style>
+		.wrap{
+			width: 400px; height: 600px;
+			border: 1px solid silver;
+		}
+		.wrap:hover > div{
+			width: 400px;
+			background-color: crimson;
+		}
+		div{transition: all 3s;}
+	</style>
+	<style>
+		.box1{transition-timing-function: linear;} /*리니어 똑같은 속도로 일정하게가라*/ /* 타이밍 펑션 가속도 이징 효과라고도 함 도착시간은 같음*/
+		.box2{transition-timing-function: ease;} 기본생략 /*부드러운 효과*/
+		.box3{transition-timing-function: ease-in;} 
+		.box4{transition-timing-function: ease-out;}
+		.box5{transition-timing-function: ease-in-out;}
+		.box6{transition-timing-function: cubic-bezier(.74, .21, .87, .67);}
+	</style>
+	<!--cubic-bezier.com 참고-->
+<!--	대기시간
+	transition-delay 시간
+	0.5s = 0.5초 500ms
+	1s= 1000ms-->
+	
+</head>
+<body>
+	<section class="wrap">
+	<!--h2나 h3가 있어야한다-->
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div class="box4"></div>
+		<div class="box5"></div>
+		<div class="box6"></div>
+	</section>
+</body>
+</html>

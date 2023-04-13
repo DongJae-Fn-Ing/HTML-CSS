@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>플로팅</title>
+	<style>
+		.box1, .box2{
+			width: 100px; height: 100px;
+			border: 5px solid crimson;
+			margin: 10px;
+		}
+		.box3{ border: 5px solid #06f;}
+	</style>
+	<style>
+		.box1, .box2{float: left;}
+	</style>
+</head>
+<body>
+<!--html은 위에 값이 없어지면 위로 끌어 올린다.-->
+<!--특정한 요소를 가로로 배치하자고 할 때 float를 쓴다-->
+<!--자식이 부모를 나간것 그러면 다른 자식들이 그 자리를 채우려고 한다
+그러나 원래 자식 콘텐츠는 그 자리에 있고 올라온 자식들의 컨텐츠는 밀린다-->
+	<h2>FLOAT 속상이 형제(인접) 요소에 영향을 주는 경우</h2>
+	<hr>
+	<div class="box1">box1</div>
+	<div class="box2">box2</div>
+	<div class="box3">box3</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>애니메이션</title>
+	<style>
+		*{margin: 0; padding: 0;}
+		.box{
+			width: 100px; height: 100px;
+			background-color: gold;
+			position: absolute; /*절대위치 브라우저가 기본영역*/
+			top: 50%; margin-top: -50px; /*역마진*/
+			left: 50%; margin-left: -50px;
+		}
+		/*1 키프레임생성*/
+		@keyframes mov{
+			0%{
+				100px; height: 100px;
+				background-color: gold;
+			}
+			25%{
+				width: 200px; height: 200px;
+				background-color: #060;
+				border-radius: 50%;
+				margin-left: -100px; margin-top: -150px;
+			}
+			50%{
+				width: 200px; height: 200px;
+				background-color: #cd0;
+				border-radius: 0;
+				margin-left: -150px; margin-top: -150px;
+			}
+			75%{
+				width: 200px; height: 200px;
+				background-color: #0c0;
+				border-radius: 50%;
+				margin-left: -100px; margin-top: -150px;
+			}
+			100%{
+				width: 100px; height: 100px;
+				background-color: gold;
+			}
+		}
+		.box{ animation: mov 8s infinite;}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

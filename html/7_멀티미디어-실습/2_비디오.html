@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>비디오</title>
+</head>
+
+<body>
+  <h2>바디오(video)</h2>
+  <hr>
+
+  <!--  작성형식-1-->
+  <video src="http://wooreeweb.com/media/movie.mp4" controls muted loop autoplay></video>
+  <!--내가 가지고 있는 영상을 홈페이지에 올리는 경우 mp4만 가능-->
+	<!--확장자가 mp4라고 무조건 가능한게 아니라 코덱이 맞아야 한다. --> 
+	<!--mp4는 h.264(영상압축방식)/AAC(음성압축방식) 코덱으로 인코딩되어야 한다. -->
+  <!--작성형식-2-->
+  <video src="" controls poster="http://wooreeweb.com/img/ab.png/">
+  <source src="http://wooreeweb.com/media/movie.mp4">
+  </video>
+  <!--포스터== 썸네일
+  환경상 동영상 플레이가 불가능 할 경우 이미지라도 봐라
+  이미지를 통해 영상의 강조 부분을 알 수 있다 즉 영상 썸네일 추가 -->
+  <!--짧은 영상을 디자인 요소로 사용할 때 컨트롤을 뺴기도 하지만 다만 음성은 뺴야한다. 반복영-->
+  <ul>
+    <li>비디오 재생시에는 video 태그를 사용한다.</li>
+    <li>기본적인 속성은 audio 태그와 같다.</li>
+    <li>poster 속성을 이용하여 포스터(썸네일) 이미지를 지정할 수 있다.</li>
+    <li>mp4는 h.264/AAC 코덱으로 인코딩되어야 한다.</li>
+  </ul>
+</body></html>

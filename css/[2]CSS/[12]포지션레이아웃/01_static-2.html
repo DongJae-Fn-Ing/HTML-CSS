@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>포지션</title>
+	<style>
+		*{margin: 0; padding: 0;}
+	body{
+		background-image: url('http://wooreeweb.com/img/grid.gif');
+	}
+	</style>
+	<style>
+		p{
+			height: 50px;
+			background-color: rgba(255, 215, 0 ,0.3);
+		}
+		.box{
+			width: 200px; height: 150px;
+			background-color: rgba(220, 20, 60, 0.4);
+		}
+</style>
+<style>
+	.box{
+		top: 50px; /*위치 이동속성 위를 기준으로*/
+		left: 100px;/* 왼쪽으로 기준으로 오른쪽으로 가라 적용x*/
+		position: static; 
+		/*static 움직이지 않는 정적인// 기본값*/
+		/*포지션이 스태틱인 상태에서는 위치이동 속성이 안써짐
+		z-index도 못씀*/
+	}
+	/*위치 이동 속성
+	top 위쪽을 기준으로 아래로 이동
+	bottom 아래쪽을 기준으로 위로 이동
+	right 오른쪽을 지군으로 완쪽으로 아동
+	left 왼쪽을 기준으로 오른쪽으로 이동*/
+	</style>
+</head>
+<body>
+	<p>블럭요소 p</p>
+	<div class="box">.box</div>
+</body>
+</html>

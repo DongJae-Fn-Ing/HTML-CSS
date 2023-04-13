@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexible Box : align-items</title>
+  <style>
+   /* /이거 다시해봐 */
+    *{margin: 0;
+      padding: 0;}
+    #wrap{
+      display: flex;
+      align-items: stretch; /* 기본값 */ /* 아이템에 높이를 부여하지 않을 경우 자식들을 확장을 시킨다 */
+      width:90%;
+      height: 500px;
+      margin: 0 auto;
+      border: 2px solid #999;
+    }
+    #wrap div{
+      width: 33.33%;
+      height: 200px;
+    }
+    #wrap div:first-child{
+      background-color: red;
+      height: 80%; /* 높이가 없을 경우 끝까지 늘어남 */
+    }
+    #wrap div:nth-child(2){
+      background-color: blue;
+      height: 50%;
+    }
+    #wrap div:nth-child(3){
+      background-color: yellow;
+      height: 90%;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

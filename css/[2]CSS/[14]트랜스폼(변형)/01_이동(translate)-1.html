@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>트랜스폼</title>
+	<style>
+		*{margin: 0; padding: 0;}
+		body{
+			background-image: url('http://wooreeweb.com/img/grid.gif')
+		}
+		div{
+			width: 100px; height: 100px;
+			background-color: rgba(220, 20, 50, 0.4);
+      text-align: center; line-height: 100px;
+			position: absolute;
+		}
+	</style>
+	<style>
+		.box2 { transform: translateX(150px);} /*x축으로 150px이동*/
+		.box3 { transform: translateY(150px);} /*함수*/
+		.box4 { transform: translateX(100px) translateY(100px);}
+		.box5 { transform: translate(200px, 200px);} /*가로x, 세로y*/
+		/*대소문자 지켜라*/
+		/*transform은 영역 도형의 한가운데를 기준으로 움직인다.*/
+	</style>
+	
+	<!--translate 이동-->
+</head>
+<body>
+	<div class="box1">box1</div>
+	<div class="box2">box2</div>
+	<div class="box3">box3</div>
+	<div class="box4">box4</div>
+	<div class="box5">box5</div>
+</body>
+</html>

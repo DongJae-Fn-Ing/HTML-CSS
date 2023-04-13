@@ -1,0 +1,46 @@
+html,body{
+    height: 100%;
+}
+/* 좌측 상단 우측에 사이드바를 고정하는 레이아웃 같은 경우,
+최상위 부모 객체인 html 과 body의 right를 먼저 100%로
+고정한다. */
+
+body{
+    margin: 0; padding: 0;
+}
+/* 오차를 줄이기 위해 초기화 */
+/* f12 주황색은 마진
+녹색은 패딩 */
+.wrap{
+    height: 100%;
+}
+/* 첫번쨰 자식 객체인 wrap역시 height를 100%로 고정한다 */
+
+.wrap aside{
+    height: 100%; width: 250px; position: fixed; left: 0;
+    top: 0; background-color: #09f;
+}
+/* 좌측에 고정될 사이드 높이 역시 100%로 고정하고 position: fixed;를
+선언 좌측 상단 고정일 경우 let,top을 생략해도 되고, 우측 상단
+고정일 경우 right top 0을 사용한다 이외에도 고정 값이 좌측이
+아닐때는 좌표 값을 모두 입력을 한다. */
+
+.wrap aside ul{
+    margin: 0; padding: 0;
+}
+/* 기본적으로 aside와 ul은 margin과 padding의 기본 값을 가지고
+있으므로 초기화를 해줘서 %오차를 없앤다. */
+
+.wrap .contentBox{
+    padding-left: 250px; background-color: #f60;
+}
+/* 사이드바 옆의 컨테츠는 사이드바 너비 만큼 padding과 뱡향이 
+계산되어야만 사이드바가 컨텐츠를 덮는 오류를 미연에 
+방지 할 수 있다. */
+
+.wrap .contentBox p{
+    margin: 0; height: 2000px; font-size: 24px;
+}
+
+/*하이트 값으로 스크롤 발생시킨다*/
+/*숙제를 해라*/

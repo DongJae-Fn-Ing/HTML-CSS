@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector example - login</title>
+    <link rel="stylesheet" href="css/1_3_selector_train.css">
+</head>
+<body>
+    <div>
+        <nav>
+            <ul>
+                <li class="currentStat"><a href="#">login</a></li>
+                <!-- 얘는 운용 생각 없음 자바 스크립트로 다른곳 클릭할시
+                 currentStat가 다른 li에 붙는다  -->
+                <li><a href="#">join</a></li>
+                <li><a href="#">lost</a></li>
+                <li><a href="#">help</a></li>
+            </ul>
+        </nav>
+        <h1>member's login</h1>
+        <form>
+            <fieldset>
+                <ul>
+                    <li>
+                        <label for="userID">id</label>
+                        <input id="userID" type="text" name="userID" maxlength="8" title="insert id" />
+                    </li>
+                    <li>
+                        <label for="userPW">pw</label>
+                        <input id="userPW" type="password" name="userPW" maxlength="12" title="insert password" />   
+                    </li>
+                </ul>
+                <!-- 편하게 하기 위해 ul li 사용
+                나중에 너가 편하게 할 때 안사용해도됩니다.-->                 
+            </fieldset>
+            <input type="submit" name="loginbutton" value="login" />
+        </form>
+    </div>
+</body>
+</html>
+
+<!-- 위에는 로그인 패널
+위에 창이 먼저 뜰 경우 이것은 권한이 있는 사람만 접근이 가능한 사이트 
+그래서 여기서 h1이 들어간다
+컨퍼런트 수대에 걸쳐서 사용하는 것
+관리를 편하게 하고 다른 곳에서도 끌어다가 쉽게 사용하는 것
+코드 한덩이로 통제하는 것 
+동일하게 사용되는 요소를 컨퍼런트
+css에서 따로따로 잡지말고 모듈링 코드를 사용한다  -->

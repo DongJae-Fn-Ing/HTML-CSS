@@ -1,0 +1,68 @@
+.Selcetor1 ul{
+    list-style: none; overflow: hidden;
+}
+.Selcetor1 ul li{
+    margin: 0; padding: 30px; float: left;
+}
+
+.Selcetor1 ul li:first-child{
+    background-color: deepskyblue;
+}
+.Selcetor1 ul li:last-child{
+    background-color: firebrick;
+}
+.Selcetor1 ul li:nth-child(2){
+    background-color: gold;
+}
+.Selcetor1 ul li:nth-child(3){
+    background-color: khaki;
+}
+
+.Selcetor2 ul{
+    list-style: none; overflow: hidden;
+}
+.Selcetor2 ul li{
+    margin: 0; padding: 30px; float: left;
+}
+
+.Selcetor2 ul li:nth-child(2n){
+    background-color: magenta;
+}
+.Selcetor2 ul li:nth-child(2n+1){
+    background-color: mediumaquamarine;
+}
+
+.Selcetor3 ul{
+    list-style: none; overflow: hidden;
+}
+.Selcetor3 ul li{
+    margin: 0; padding: 30px; float: left;
+}
+
+.Selcetor3 ul li:nth-of-type(odd){
+    background-color: steelblue;
+}
+.Selcetor3 ul li:nth-of-type(even){
+    background-color: blueviolet;
+}
+/* css에서만 다른 코드에서는 반대 */
+.Selcetor4 > *:nth-of-type(1){
+    background-color: cornflowerblue;
+}
+.Selcetor4 > *:nth-of-type(3){
+    background-color: deeppink;
+}
+.Selcetor4 *:nth-of-type(2){
+    background-color: gold;
+}
+
+.Selcetor5 P{
+    counter-increment: no;
+}
+.Selcetor5 P:before{
+    content: counter(no) "! 출력 ";
+}
+.Selcetor5 p:after{
+    content:'_' attr(data-no) "no.";
+    font-weight: bold; color: goldenrod;
+}

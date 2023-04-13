@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>이미지 링크</title>
+  <style>
+    * {  /* *==모든 선택자  */       /*css 초기화 방식*/ /*브라우저는 자체적으로 공간을 만들어서 오차를 없애려면 초기화를 해야한다*/
+      margin: 0;
+      padding: 0;
+    }
+
+    #topbnr a {
+      width: 240px;
+      height: 80px;
+      display: block;
+      float: left;
+    }
+
+    #topbnr {
+      width: 960px;
+      height: 80px;
+      margin: 0 auto;
+    }
+
+    .topbnr-wrap {
+      background-image: linear-gradient(90deg, #edda00 50%, #82d7d7 50%); /*너비가 고정된 페이지를 고정형 레이아웃이라 한다*/
+      height: 80px;
+    }
+  </style>
+</head>
+<!--  .topbhr-wrap>#topbnr>(a[href=#]>img[src=http://wooreeweb.com/img/b$.png])*4-->
+<body>
+  <div class="topbnr-wrap">
+    <div id="topbnr"> <!--앵커 태그 즉 a태그 안에 이미지태그가 들어간 걸 이것을 이미지 링크-->
+      <a href="#"><img src="http://wooreeweb.com/img/b1.png" alt=""></a>
+      <a href="#"><img src="http://wooreeweb.com/img/b2.png" alt=""></a>
+      <a href="#"><img src="http://wooreeweb.com/img/b3.png" alt=""></a>
+      <a href="#"><img src="http://wooreeweb.com/img/b4.png" alt=""></a>
+    </div>
+  </div>
+
+</body></html>

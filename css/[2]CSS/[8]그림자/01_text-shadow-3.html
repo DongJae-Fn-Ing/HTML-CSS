@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>글자 그림자(text-shadow)</title>
+	<style>
+		h2{color: #09f; margin: 20px;}
+		.ts1{ text-shadow: 1px 2px 3px #06f;} 
+		/*여기서 3번쨰 값은 흐림효과 블러*/
+		/*x y 불러 색상*/
+		/*불러 생략가능*/
+		/*순서 바꾸면 못쓴다*/
+		.ts2{text-shadow: -15px -10px 10px #f30;} 
+		/*색을 많이주면 많이 줄 수록 색이 날아간다*/
+	</style>
+</head>
+<body>
+	<h2 class="ts1">Text Shadow Effect</h2>
+	<h2 class="ts2">Text Shadow Effect</h2>
+</body>
+</html>

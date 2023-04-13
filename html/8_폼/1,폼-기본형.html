@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>폼</title>
+	<style>
+	/*아이폰 기본 스타일 제거*/
+		input{
+			-webkit-appearance: none; /*아이폰은 자기 스스로 폼의 모서리를 둥글게 한다. 그 것을 막기위해 한다.*/
+		}
+	</style>
+	<style>
+		input, lable {display: block; margin-bottom: 10px;}
+		input{ margin-bottom: 10px;}
+		lable{ margin-bottom: 10px;}
+		input[type='radio'], input[type='checkbox']{display: inline-block}
+	</style>
+</head>
+<body>
+<!--기본적인 목표 사용자의 데이터를 입력 받아서 서버에 저장해서 보여주는 것이 목표-->
+	<form action="aaa.php"> <!--기본적으로 들어가야한다--> 
+	<!--파일형식이 php asp jsp 인 곳으로 경로를 잡아줘야 해야한다-->
+	
+<!--	method는 서식 값들을 어떤식으로 전달할지 정하는 속성
+	<form action="aaa.php" method="get">
+		검색 : <input type="search">
+	</form>
+	get방식
+	입력한 데이터를 노출을 하고 전달만 url등등에 노출
+	<form action="aaa.php" method="post">
+		검색 : <input type="search">
+	</form>
+	post방식
+  암호화방식 아이디 비번등 개인정보 보호용
+  암호화해서 전달-->
+  	
+		<lable for="n">텍스트 상자 - 기본형</lable> 
+		<!--레이블은 폼태그의 타입하고 연동시킨다 사용자에게 뭐 해야하는지 보여주는 용도 그냥 딱지 -->
+		<!--for 안에 타입을 묶거나 id를 입력시키면 해당 아이디와 연동 시키는 역활-->
+		<input type="text" id="n">
+		<!--text는 한줄에 글자를 입력하는 칸-->
+		
+		<lable>텍스트 상자 - size ~length</lable>
+		<input type="text" size="10" maxlength="8" name="uid">
+		<!--maxlength 최대 글자 수 제한-->
+		<!--name은 이름을 만들어주는 역활-->
+		
+		<lable>텍스트 상자 - autocomplete</lable>
+		<input type="text" autocopmplete="off">
+		<!--autocopmplete == 자동완성-->
+		
+		<lable>텍스트 상자 - autofocus, placholder</lable>
+		<input type="text" autofocus placeholder="내용">
+		<hr>
+		<!--autofocus 자동으로 커서를 여기 input으로 보내라-->
+		<!--네이버를 실행시 자동으로 검색창에 가있는 개념-->
+		<!--placeholder 칸에 텍스트가 떠있는다-->
+		
+		<lable>비밀번호</lable>
+		<input type="password" required>
+		<hr>
+		<!--required 필수입력 입력하지 않으면 안 넘어간다.-->
+		
+		<lable>글상자</lable>
+		<textarea name="" id="" cols="30" rows="10"></textarea>
+	  <!--input은 한줄만 입력가능--> 
+	  <!--textarea는 여러줄을 입력이 가능하다(리뷰나 상품평 같은 것) cols 칸수 row는 줄수 이 속성으로 크기를
+	  조절 할 수 있다-->	
+	  </form>
+	  <!--여기에 접속을 하려면 보통 버튼이 필요하다-->
+	  
+<!--	  tabindex 탭기로 이동시 탭의 순서를 만들어준다
+	  tabindex="1" tabindex="2"....이순서
+	  tabindex="0" 포커스를 못 받는 걸 받게한다.
+	  tabindex="-1" 받는 것을 못 받게 한다.-->
+<!--	  pattern 지정한 문자패턴과 입력한 내용이 일치여부 확인
+	  pttern =\d{3} 이면 3자리를 딱 입력해야한다.-->
+	  </body>
+</html>

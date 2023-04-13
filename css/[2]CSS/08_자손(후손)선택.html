@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>자손(후손)선택</title>
+	<style>
+		ol > li{ /*직계만*/
+			color: red;
+			background-color: yellow;
+		}
+		ul li{ /* 하위 내역 모두*/
+			border: 1px solid orange;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h3>자손(후손) 선택</h3>
+		 <ul>
+		 	<li>아이템-1</li> <!--테두리는 겹쳐지지 않고 합쳐진다.-->
+		 	<li>아이템-2
+		 	<ol>
+		 		<li>ol 아이템</li>
+		 	</ol>
+		 	</li>
+		 	<li>아이템-3</li>
+		 </ul>
+	</div>
+</body>
+</html>

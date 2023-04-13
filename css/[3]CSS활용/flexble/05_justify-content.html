@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexible Box : justify-content</title>
+  <style>
+    *{margin: 0;
+      padding: 0;}
+    #wrap{
+      display: flex; /* 플렉스 디렉션 플렉스 랩 생략 왜냐 기본값 설정*/
+      justify-content: space-around; /* flex-start 기본값 */
+      width:90%;
+      height: 500px;
+      margin: 0 auto;
+      border: 2px solid #999;
+    }
+    #wrap div{
+      width: 20%;
+    }
+    #wrap div:first-child{
+      background-color: red;
+    }
+    #wrap div:nth-child(2){
+      background-color: blue;
+    }
+    #wrap div:nth-child(3){
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

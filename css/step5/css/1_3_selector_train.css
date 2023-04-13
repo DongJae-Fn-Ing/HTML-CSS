@@ -1,0 +1,118 @@
+body{
+    height: 100%;
+}
+
+body{
+    height: 100%; margin: 0; background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body > div:first-of-type{
+    width: 50%; height: 50%; background-color: #262626;
+    position: absolute; top: 25%; left: 25%;
+}
+/*마진영 오토 패딩 25씩 줘도 상관없지만 다른페이지에서
+못쓴다 그래서 이렇게 써라*/
+/* 5배수 관계로 어림을 잡는다 크기를
+절반으로 나누고 나눠진 거에서 또 절반을 나누면 25% 나눠지면
+범주를 대충 알 수 있다 */
+body > div:first-of-type nav{
+    margin-bottom: 25px;
+}
+/* 복사법 쉬프트 위방향키 */
+
+body > div:first-of-type nav ul{
+    padding: 0; margin: 0;
+}
+
+body > div:first-of-type nav ul:after{
+    content: ''; display: block; visibility: hidden; clear: both;
+}
+/* 애프터가 없으면 부모값이 없어진다 
+이렇게 부모기준이 0이 되버리면 마진 바텀이 0 되버려
+값의 통제가불가
+구조들의 정상적인 값을 찾기 위하여
+플로트 사용하면 부모값 없어짐 */
+body > div:first-of-type nav ul li{
+    float: left; width: 25%;  /*div의 기준으로*/display: block;
+    background-color: #3b3b3b;
+}
+/* 인라인 블럭 ㄴㄴ */
+body > div:first-of-type nav ul li a{
+    display: inherit;/*블럭도 좋지만 인헤딧은 자기 부모의 속성 값을 가져온다
+    일반적인 구조에서는 안쓰이지만 이런 플랫폼형 방식 시스템을 만들어 놓으면 
+    사용자가 쉬게 바꿀수 있는 방식에서 통제가 편하다 예 카페24
+    모든 속성에서 인헤딧을 쓸 수 있다
+    클래스 하나 교체를 하면 전체 색상을 통제 */ 
+    text-decoration: none; /*여기에 텍스트 센터를 넣으면 a를 블럭을 설정한게 무용지물*/
+    text-align: center;
+    padding: 10px 0; /*라인하이트 쓰지말고 패팅 써*/
+    font-size: 12px; color: #ea0e52;
+    text-transform: capitalize;
+}
+
+body > div:first-of-type nav ul li a:hover,
+body > div:first-of-type nav ul li a:focus, /*특정 색상을 못보시는 분*/
+body > div:first-of-type nav ul lu.currenStat a{
+    background-color: #ea0e52; color: white;
+} 
+
+body > div:first-of-type h1{
+    font-size: 14px; color: white; margin: 0 0 25px 0; /*마진구조 생각*/
+    text-transform: capitalize; text-align: center;
+}
+
+body > div:first-of-type fieldset{
+    border: none; padding: 0; margin: 0 auto;/*위스가 100%로면 마진 0 오토
+    미작동 공간에 대한 너비를 부모에 주는 게 편하다*/ width: 90%;
+}
+
+body > div:first-of-type fieldset ul{
+    margin: 0; padding: 0; list-style: none;
+}
+
+body > div:first-of-type fieldset ul li:after{
+    content: ''; display: block; visibility: hidden; clear: both;
+}
+/* 똑같이 애프터 캔슬러 넣어도 상관 없지만
+    애프터 캔슬러 넣은 것에 ,찍고 다시 입력을 해보거나
+    클래스를 넣어서 통제해봐 */
+
+body > div:first-of-type fieldset ul li{
+    margin-bottom: 25px;
+}
+
+body > div:first-of-type fieldset ul li label{
+    width: 15%; display: block;  float: left; text-align: center;
+    background-color: #ea0e52; padding: 12px 0; font-size: 12px;
+    text-transform: uppercase; font-weight: bold; color: white;
+}/*인풋의 패딩의 숏엔드 때문에 5%추가*/
+
+body > div:first-of-type fieldset ul li input{
+    width: 80%; border: none; font-size: 12px; padding: 12px 2.5%;
+}
+/* 패딩으로 라인을 맞춰 주려면 좌우값과 폰트 사이즈가 동일해야 한다.  */
+body > div:first-of-type fieldset ul li input:focus{
+    background-color: #ea0e52;
+    }
+    
+    body > div:first-of-type fieldset ul li input[type='passward']:focus{
+        color: white;
+    }
+    /* 레이블이랑 인풋이 제대로 연동 됬는가 확인 텍스트가 흰색으로 바겼는가 */
+    
+    body > div:first-of-type input[type='submit']{
+    width: 90%;/*부모 넓이*/ margin: 0 auto; display: block; border: none;
+    background-color: #3e3e3e; padding: 16px 0;  color: #ea0e52;
+    }
+    /* 인라인 블럭 부모 기준의 텍스트 라인에 영얗을 받아 마진 영 오토 적용불가 */
+    /* 크로스 브라우징이 필여힐떼민 라인하이트 근데 쓸일 없음 */
+    
+    body > div:first-of-type input[type='submit']:hover{
+        background-color: #ea0e52; color: black; cursor: pointer;
+    }
+    /* 
+    브라우저는 줄어 들을 수 있는 한계가 있다 그래서 위스는 얼마든지 줄어들어도 상관없는데
+    하이트는 줄어들다가 특정 범위에서 안줄어든다  민 하이트를 넣은다
+    바디는 사이즈 개념이 불가 공간이 div에 민하이트 박는다
+    이미지 개념을 공부해라 */

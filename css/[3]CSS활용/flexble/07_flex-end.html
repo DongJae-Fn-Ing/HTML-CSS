@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexible Box : flex-end</title>
+  <style>
+    *{margin: 0;
+      padding: 0;}
+    #wrap{
+      display: flex;
+      width:90%;
+      height: 500px;
+      margin: 0 auto;
+      border: 2px solid #999;
+    }
+    #wrap div{
+      width: 33.33%;
+      height: 200px;
+    }
+    #wrap div:first-child{
+      align-self: flex-end;
+      background-color: red;
+    }
+    #wrap div:nth-child(2){
+      align-self: center;
+      background-color: blue;
+    }
+    #wrap div:nth-child(3){
+      /* 없으면 원래 기본은 스트레치 하지만 높이를 줘서 플렉스 스타트 */
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

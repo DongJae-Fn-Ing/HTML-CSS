@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>원형 그라디언트(radial-gradient)</title>
+	<style>
+		div{width: 600px; height: 300px;}
+	</style>
+	<style>
+		.radial1{
+			background-image: radial-gradient(yellow, green);
+		} /*밖에서 안으로*/
+		.radial2{
+			background-image: radial-gradient(yellow, green 50%);
+		} /*안에서 밖으로*/
+		/*아무것도 안쓰면 도형의 중심점에서 퍼져난간다*/
+	</style>
+</head>
+<body>
+	<div class="radial1"></div>
+	<div class="radial2"></div>
+</body>
+</html>

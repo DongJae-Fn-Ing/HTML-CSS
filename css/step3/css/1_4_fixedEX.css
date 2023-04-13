@@ -1,0 +1,30 @@
+*{
+    margin: 0; padding: 0;
+}/* * == 전체 선택자 즉 모든 태그에 마진 패딩을 뺀다
+실무에서 쓰지마라 캔슬러가 많이 발생 유산상속 관계에서 심각한 장애가
+생긴다 쓰지마라
+*mp4 경로내에 있는 확장자mp4를 전체선택*/
+
+html,
+body{
+    height: 100%;
+}/*화면이 처음 계산이 될때만 계산이됩니다*/
+body{
+    background: url('../images/example.jpg') no-repeat center top;
+    background-size: cover; /*==100% 주로 쓰는 건 contain*/
+    /*contain== 비율고정 비율을 망가지지 않으면서 해당창의
+    이미지 꽉 채우는것*/
+    /*상반대는 것 cover ==
+    백그라운드 커버에 nd-image: url('../images/example.jpg') no-repeat center top;
+    이게 제일 많이 쓴다 */
+    background-attachment: fixed;
+}/*공간보다 이미지가 작으면 우측하단
+공간보다 이미지가 크면 포커스 이동*/
+/*background shorthand : color or image repeat postion*/
+body > div{
+    background-color: white; margin-bottom: 15%; padding: 5%;
+}
+body > div h2{
+    font-size: 38px; margin-bottom: 20px;
+}
+/*직접 뜯어봐라 불가했으니*/

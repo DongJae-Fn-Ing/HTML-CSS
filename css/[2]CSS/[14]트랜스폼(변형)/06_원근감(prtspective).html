@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>트랜스폼</title>
+	<style>
+		*{margin: 0; padding: 0;}
+		body{
+			background-image: url('http://wooreeweb.com/img/grid.gif')
+		}
+		div{width: 100px; height: 100px; margin: 100px;
+		border: 5px solid #f00;
+		box-sizing: border-box;}
+		div p{
+		width: 100%; height: 100%;
+			background-color: blue;
+			opacity: 0.3;
+			transition: all 0.6s;
+		}
+	</style>
+	<style>
+		div:hover p{transform: rotateY(180deg);)}
+	</style>
+	<style>
+		.box1{perspective: 400px;} /*perspective 원근 속성 (소실점) 우측 top bottom에서 선을 교차로 그었을 떄 만나는 지점*/ 
+		.box2{perspective: 800px;}  /*작은수를 주면 기준점이 튀어 나온다*/
+		.box3{perspective: 1000px;}
+		.box4{perspective: 150px;}
+		/*perspective 원근 속성은 부모한테 부여해준다 그래야 작동. 입체감을 느껴지도록 한다.*/
+	</style>
+</head>
+<body>
+	<div class="box1">
+	<p></p>
+	</div>
+	<div class="box2">
+	<p></p>	
+	</div>
+	<div class="box3">
+		<p></p>
+	</div>
+		<div class="box4">
+		<p></p>
+	</div>
+</body>
+</html>

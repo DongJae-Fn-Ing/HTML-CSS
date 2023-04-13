@@ -1,0 +1,75 @@
+body{
+    margin: 0; padding: 0;
+}
+
+/*margin 동일선상 라인에 있는 box끼리 서로 밀어내고
+당기는 것
+border padding with(너비에 영향을 준다) 실제 수치를
+기반으로 해서 그렇다*/
+.firstDiv{
+    margin: 10px;
+    /* margin-top: 10px; body입장에서 padding이기 때문 잘못된 케이스 
+    margin-right: 10px;  body입장에서 padding이기 때문 잘못된 케이스
+    margin-bottom: 10px;  얘만 사용가능
+    margin-left: 10px; body입장에서 padding이기 때문 잘못된 케이스 */ 
+    background-color: #555;
+}
+/*f12 후 셀렉트 모드로 엘레멘트의 원하는 영역을 클릭하면
+컴퓨티드에 마진등의 픽셀 값을 알 수 있다.*/
+/* 부모 body를 밀어내어 잘못된 코드 */
+
+.firstDiv article{
+    background-color: #039; color: white;
+}
+
+/* 배경없이 똑같은 바탕에 공간을 줘야 할 때 뭐를 써야하는 지 알고
+싶은면 위에 값이 다른 태그로 묶여 있는지 확인을 하고 없으면
+padding ! 있으면 margin이다. */
+/* margin 끼리 부디치면 큰놈이 작은 값을 먹는다 */
+.secondDiv{
+    background-color: #ddd; margin: 20px 15px;
+}
+/* firstDiv의 margin-bottom: 10px상쇄
+secondDiv의 margin- top이 더 크기 때문.(같아도 상관없음
+상쇄가 되지 않기 때문에) */
+.secondDiv article{
+    background-color: #930; margin: 10px;
+} 
+/* margin-bottom이 비 적용 된 것을 확인 할 수 있다(경계선 너머
+적용) 그렇기 때문에 부모요소가 자손요소에게 padding을
+사용하는 것이 바람직 하다. */
+/*이해불가 질문*/
+/* 바깥 쪽에 있는 부모 경계선을 건드리면 안된다 */
+/* 마진은 같은 라인에서 있는 애들끼리만 쓰고 같은 방향성을
+가진 애들끼리만쓴다 */
+
+.centerDiv{
+width: 300px; border: 1px solid #33f; padding: 10px;
+margin:  0 auto; text-align: center;
+}
+
+.centerDiv article{
+margin: 10px;
+background-color: #f33; color: white;
+/*margim과 부모의 padding은 섞이지 않는다 
+물과 기름 같이 ... 무조건 가산됨*/
+}
+/* 부모가 자손을 밀어낼때랑 이 때는 부모 코드에 padding
+같은 라인끼리 자손을 밀어내야 하는 때인지 구분을 해야한다 
+이때는 같은 라인 자손들 끼리 마진*/
+
+.paddingDiv{
+background-color: #ff3; color: white; width: 600px;
+margin: 0 auto; border: 3px solid #333;
+}
+.paddingDiv:after{
+    content: ''; display: block; visibility: hidden; clear: both;
+}
+.paddingDiv article{
+width: 33.33%; float: left; border: 1px solid black;
+box-sizing: border-box; /* 보더 사이즈 
+박스가 다 고쳐주지만 
+사용자가 암산되기 힘든 영역 계산 됬을 때 오차범위를 삼켜줄 수
+있도록 해준다
+당분간 쓰지마라 */
+}

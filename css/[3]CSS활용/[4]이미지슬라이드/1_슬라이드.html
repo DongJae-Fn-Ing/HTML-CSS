@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지슬라이더</title>
+  <!-- 캐러셀(carousel) -->
+  <style>
+    /* 초기화 */
+    *{margin: 0; padding: 0;}
+    li{list-style: none;}
+
+    /* 이미지 슬라이드 영역 */
+    .slide-wrap{
+      position: relative; height: 600px; /* 앱솔루트면 자식요소 크기만큼 가진다 */
+      /* 600을 준이유 여유있게 인디케이트까지 쓰려고 */
+    }
+
+    /* 이미지 배경 */
+    .slide-img1{background-image: url('http://wooreeweb.com/img/bg-1.jpg');}
+    .slide-img2{background-image: url('http://wooreeweb.com/img/bg-2.jpg');}
+    .slide-img3{background-image: url('http://wooreeweb.com/img/bg-3.jpg');}
+    .slide-img4{background-image: url('http://wooreeweb.com/img/bg-4.jpg');}
+
+    /* 배경 이미지가 보이도록 li 설정 */
+    .slide-wrap ul li{
+      height: 500px; /* 여기서 크기를 줘서 이미지를 나오게 한다 */
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: absolute; top: 0; left: 0; /* 앱솔루트 쓰면 이미지가 겹쳐진다 */
+      width: 100%; /* 앱솔루트를 만들었으면 너비 무조건 */
+    }
+
+    /* 인디케이터(닷이라고도 한다.) */
+    .slide-wrap input,
+    .slide-wrap label{
+      position: relative; top: 520px; /* 자식이 없어 자기 자신을 움직인다 */
+    }
+
+    /* 인디케이터 디자인 */
+    .slide-wrap label{
+      width: 20px; height: 20px;
+      background-color: #ddd;
+      display: inline-block; /* 가로 배치하면서 4px의 간격이 생긴다 인라인도 마찬가지 */
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    /* 라디오 버튼 숨기기 */
+    .slide-wrap input[type="radio"]{
+      display: none; /* 라디오 버튼 없어져라 */
+      /* 굳이 타입 속성과 radio로 지칭을 한 이유는 정확하게 딱 너라는 것을 이야기한다 정확도 높이기 위해 */
+    }
+
+    /* 모든 슬라이드 이미지 숨기기 */
+    .slide-wrap ul li{display: none;}
+/* 인디케이터 체크시 선택 이미지 보이기 */
+#btn1:checked  ~ .slide li:nth-child(1){display: block;}
+#btn2:checked  ~ .slide li:nth-child(2){display: block;}
+#btn3:checked  ~ .slide li:nth-child(3){display: block;}
+#btn4:checked  ~ .slide li:nth-child(4){display: block;}
+    
+  </style>
+</head>
+<body>
+  <div class="slide-wrap">
+    <!-- 1 인디케이터(닷) -->
+    <!-- 이미지 동일한 갯수로 만들어준다 -->
+    <input type="radio" name="dot" id="btn1" checked> <!-- id는 라벨을 통해 디자인 하겠다 -->
+    <label for="btn1"></label>
+    <input type="radio" name="dot" id="btn2">
+    <label for="btn2"></label>
+    <input type="radio" name="dot" id="btn3">
+    <label for="btn3"></label>
+    <input type="radio" name="dot" id="btn4">
+    <label for="btn4"></label>
+    
+    <!-- 2 슬라이드 이미지 -->
+    <ul class="slide">
+      <li class="slide-img1"></li>  <!-- 크기가 없으니 컨텐츠가 없다 -->
+      <!-- 백그라운드 이미지 사용한 이유 위치 선정과 크기를 자유롭게 하려고 -->
+      <li class="slide-img2"></li>
+      <li class="slide-img3"></li>
+      <li class="slide-img4"></li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>포지션</title>
+	<style>
+		*{margin: 0; padding: 0;}
+	body{
+		background-image: url('http://wooreeweb.com/img/grid.gif');
+	}
+	</style>
+	<style>
+		p{
+			height: 50px;
+			background-color: rgba(255, 215, 0 ,0.3);
+		}
+		.box{
+			width: 200px; height: 150px;
+			background-color: rgba(220, 20, 60, 0.4);
+		}
+</style>
+<style>
+	.box{
+		top: 0px;
+		left: 0px;
+		position: absolute; 
+		/*절대위치 기준점이 상황에 따라 달라진다*/
+		/*앱솔루트는 스택틱이 아닌 부모요소를 기준으로 잡는다*/
+    /*즉 부모요소가 스태틱이면 그 위에 부모를 보는 형식*/
+		/*부모 요소의 포지션을 기준으로 이동
+		부모 요소의 포지션이 static이면,
+		static이 아닌 요소를 만날때까지 조상 요소로 올라가면서 기준을 찾음*/
+		/*앱솔루트를 쓸 떼 탑이나 레프트를 둘중하나를 최소한 기준으로 잡는다*/
+		/*포스트잇을 떼서 붙이는 거랑 같다? 잘라서 붙힌다.*/
+		/*플로팅은 컨텐츠들이 밀려나지만 앱솔루트는 콘텐츠들이 켭처진다*/
+		/*스크롤 요소를 받는다*/
+		
+		/*중요*/
+		/*float와 position: absolute는 같이 쓸 수 없다.
+		또한 position: absolute margin: 0 auto를 쓸 수 없다. 브라우저 계산 불가
+		*/
+	  /*브라우저가 앱솔루트의 영역을 계산 못한다*/
+		/*중요*/
+		
+	}
+	/*위치 이동 속성
+	top 위쪽을 기준으로 아래로 이동
+	bottom 아래쪽을 기준으로 위로 이동
+	right 오른쪽을 지군으로 완쪽으로 아동
+	left 왼쪽을 기준으로 오른쪽으로 이동*/
+	</style>
+</head>
+<body>
+	<p>블럭요소 p</p>
+	<div class="box">.box</div>
+</body>
+</html>

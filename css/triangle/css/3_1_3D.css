@@ -1,0 +1,91 @@
+body{
+    width: 200px; margin: 200px auto;
+}
+div{
+   width:  200px;
+}
+div span{
+    width: 200px; height: 200px; display: block;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    transform-style: preserve-3d;
+}
+
+div.rotater span:first-of-type{
+    background-color: red; animation-name: hori;
+}
+
+@keyframes hori{
+    from{
+transform: rotatex(0deg);
+    }to{
+transform: rotatex(360deg);
+    }
+}
+/*x축을 기준으로 회전을 하는 예제 완료
+오븐 통닭 회전 하는 것을 생각을 해라*/
+div.rotater span:nth-child(2){
+    background-color: blue; color: #fff; animation-name: verti;
+}
+
+@keyframes verti{
+    from{
+transform: rotatey(0deg);
+    }to{
+transform: rotatey(360deg);
+    }
+}
+
+div.rotater span:nth-child(3){
+    background-color: green; color: #fff; animation-name: depth;
+}
+
+@keyframes depth{
+    from{
+transform: rotatez(0deg);
+    }to{
+transform: rotatez(360deg);
+    }
+}
+/*내모니터 기준으로 위로 솟는*/
+div.rotater span:last-of-type{
+    background-color: yellow; animation-name: rotate3D;
+}
+
+@keyframes rotate3D{
+    from{
+transform: rotate3d(0,0,0,0deg);
+/* rotatex(0deg) rotatey(0deg) rotatez(0deg) */
+    }to{
+transform: rotate3d(1,1,1,360deg) ;
+    }
+    /* rotatex(360deg) rotatey(360deg) rotatez(360deg) */
+}
+/*축들이 만나는 교차점에 만든다*/
+
+div.translater span{
+    background-color: brown; color: #fff; animation-name: trans3D;
+}
+@keyframes trans3D{
+    from{
+        transform: rotate3d(0,0,0, 0deg) translate3d(0px,0px,0px) scale3d(0,0,0); 
+    }to{
+        transform: rotate3d(1,1,1, 360deg) translate3d(100px,300px,0px) scale3d(1,1,1);
+    }
+}
+/*이거 다시해봐  해 불가하자*/
+
+
+
+div.scaler span{
+    background-color: chartreuse; color: #fff; animation-name: sca;
+}
+@keyframes sca{
+    from{
+        transform: scale3d(0,0,0);
+    }to{
+        transform: scale3d(1,1,1);
+    }
+}
+

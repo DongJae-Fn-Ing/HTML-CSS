@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>행합치기</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid #09f;
+      border-collapse: collapse;
+      padding: 10px;
+    }
+
+    th {
+      background-color: azure;
+    }
+
+  </style>
+</head>
+<!--테이블 작성 예-->
+
+<body>
+
+  <table>
+    <caption>행 합칙 : rowspan="합칠 샐의 개수"</caption>
+    <tr>
+      <th>제목(레이블)</th>
+      <th>제목(레이블)</th>
+      <th>제목(레이블)</th>
+    </tr>
+    <tr>
+      <td>내용</td>
+      <td colspan="2">내용</td>
+
+    </tr>
+    <tr>
+      <td colspan="2">내용</td>
+      <td rowspan="2">내용</td>
+    </tr>
+    <tr>
+      <td>내용</td>
+      <td>내용</td>
+      <!--<td>내용</td> rowspan이랑 합쳐져서 삭제를 한다.-->
+    </tr>
+
+  </table>
+  <ul>
+    <li>table : 표 생성</li>
+    <li>tr : 행(Table Row.Record)</li>
+    <li>th : 제목(Table Header)</li>
+    <li>td : 내용, 열, 데이터(Table Data)</li>
+  </ul>
+<!--scope 속성은 열이나 행에 사용하는 속성이고 스크린리더에서 행 위치가 변경하면 변경한 행과 열의 제목을 읽어줍니다-->

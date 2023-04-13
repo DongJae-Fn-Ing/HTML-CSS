@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>폼</title>
+	<style>
+		input, lable {display: block; margin-bottom: 10px;}
+		input{ margin-bottom: 10px;}
+		lable{ margin-bottom: 10px;}
+		input[type='radio'], input[type='checkbox']{display: inline-block}
+	</style>
+</head>
+<body>
+<label for="">전송버튼 - 기본형</label>
+<input type="submit">
+<!--아무것도 지정을 안하면 기본값은 제출이다.-->
+
+<label for="">전송버튼 - 이름 지정</label>
+<input type="submit" value="보내기">
+<!--value 속성을 통해 제출대신 다름 이름으로 바뀐다-->
+
+<label for="">라디오 버튼</label>
+<input type="radio" checked>HTML
+<input type="radio">CSS
+<hr>
+<!--checked 체크된 상태로 표시 요즘 쓰면 안돼-->
+<!--중복선택 및 다중선택이 된다 따로따로 인식을 해서-->
+
+<label for="">라디오 버튼 - 그룹</label>
+<input type="radio" name="grp">HTML
+<input type="radio" name="grp">CSS
+<hr>
+<!--name 속성을 통해 그룹핑을 해줘서 다중선택을 안하고 싶으면 안할 수 있다.-->	
+<!--이게 보통-->
+	
+<label for="">체크박스</label>
+<input type="checkbox" checked>HTML
+<input type="checkbox">CSS
+<hr>
+<!--기본 다중선택-->
+<!--따로 그룹도 필요없다.-->
+<!--css에서 클릭 기능 구현 할 때-->
+	
+<label for="">업로드</label>
+<input type="file">
+<hr>
+<!--자동으로 파일 선택이 만들어지는데 파일 선택을 누르면 탐색기가 열린다 업로드를 하면 파일명도 나온다
+실제 업로드는 아니다
+보통 css로 디자인을 해준다-->
+	
+<label for="">이미지 버튼</label>
+<input type="image" src="http://wooreeweb.com/img/button.jpg" width="100" height="42">
+<!--이런 방법도 있다-->
+
+
+
+</body>
+</html>

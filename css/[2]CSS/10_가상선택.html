@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>가상(의사)선택</title>
+	<style>
+		p{border: 1px solid #333;}
+		p:before{/* p태그 안으로 들어가서 맨 앞에*/
+			content: '';
+			border-left: 5px solid crimson;
+		}
+		p:after{
+			content: '뒤에 삽입';
+			color: crimson;
+		}
+		/*비포랑 애프터가 들어가면 내용이 있던 없 content 속성은 무조건 있어야한다.*/
+	</style>
+</head>
+<body>
+	<p>
+		: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quis nulla, a, delectus ad quod asperiores magnam suscipit modi ducimus dignissimos nemo eligendi voluptatum quasi voluptatibus ullam natus veritatis harum.
+	</p>
+</body>
+</html>

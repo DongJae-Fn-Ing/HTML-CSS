@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"> <!--인코딩 방식-->>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--익스플로어의 브라우저의 호환성-->
+  <meta name="viewport" content="width=, initial-scale=1.0"><!--사이트에 대한 설명-->
+  <title>Document</title><!--제목 브라우저의 제목 표시줄-->
+  <link rel="stylesheet" href=""><!--외부페이지 연결 및 파비콘 연결 브라우저 제목 표시줄 옆 이모티콘 
+  파비콘은 최대한 단순하게--> 
+</head>
+<body></body>
+  <!--html을 사용하는 것은 와이어프레임을 만드는 것이다.
+  다양한 api 어플리케이션 프로그래밍 인터페이스 
+  태그에서 api를 지정하면 그것은 자바스크립트
+
+  html5에 추간된 대표적인 api
+  -오프라인 웹 구현을 위한 api
+  -실시간 커뮤니케이션 api
+  -파일 및 하드웨어 접근 api
+  -gui를 위한 api등
+최신 웹은 html과 자바
+
+html - 마크업을 한다
+
+html 문서의 구성 
+요소(element) 태그(tag) 콘텐츠(content)
+
+태그 (모든 태그는 무조건 사각형의 영역을 가진다.)
+기본형식 <>ㅁㄴㅇㅁㄴㅇ</>
+빈형식<br> 그자체로 역활을 할 수 있고 이 태그 사이에 텍스트 못 넣어
+
+속성(특징 성격) attribute 어트리뷰트 - attr
+필요에 따른 정해진 속성을 가질 수 있고 사용할 수 있는 속성 태그마다 다를 수 있다.
+여러 개의 속성 선언 가능 이 때 속성과 속성은 공백으로 구분하여 지정
+값을 가지지 않는 논리 속성도 있음
+기본규칙 -- 속성이름 == "속성값" (속성값이 1개 유일 or 속성이름과 동이 논리부정 속성 속성명 생략가능)
+
+<p>내용입니다</p> >> 이 전체를 요소라 지칭 엘리먼트
+p는 태그 엘리먼트(태그요소) t.e
+내용입니다는 컨텐츠 엘리먼트(컨텐츠요소)c.e
+
+html 하위 호환성을 가지고 있지만 xhtml보다는 만만 html 구버전 보단 빡빡하다
+html5는 종료 태그의 생략이 가능
+<img src="images/aasdasd.png"/>
+최근 트랜드
+
+html5 속성은 무조건 소문자 대문자도 인식이 가능하지만 소문자써라
+
+
+속성
+<img src="../step1/images/aasdasd.png" alt="자세한 설명" longdesc="desc/4_1_longDesc.html"> 큰 따움표 권장
+
+태그는 겹친 공간은 없다.
+옳은 예
+<P><i>기울이기</i></P>
+
+속성은 중복사용 불가능
+
+특수문자는 엔티티코드로 변환을 해야한다.
+엔티티코드 검색해서 써러
+
+html5의 인코딩 
+<meta charset="UTF-8"> << 유니코드
+
+
+block 요소 영역을 가지고 있는 태그
+html body section p div artcle header adress div p ol ul li dl dd figcation pre
+h1 ~ h6 footer figure blockquote hr
+table caption colgroup thead tfoot tbody tr th td form fildeset legend col
+
+컨텐츠의 양에 관계 없이 무조건 부모 요소의 너비만큼 공간을 차지 
+<p>피태그</p>
+p가 부모
+피태그가 자식 컨텐츠
+
+너비와 높이를 지정 가능
+대부분 상하 여백을 가지고 있고(모두x) 별도로 여백을 줄 수 있다.
+블록 요소의 너비는 내가 지정 안하면 100% 너비를 가진다.
+
+block요소 안에 inline요소 포함
+
+
+inline 요소 라인적 요소 줄
+a strong b small time span selcet textarea output meter em i mark q sub sup del
+optgroup option progress meter
+
+컨텐츠의 양 만큼의 너비만 차치
+너비와 높이를 가질 수 없다
+상하 여백x
+인라인 요소는 블록 요소를 자식으로 가질 수 없다.
+벗 a태그는 허용
+
+inline block 요소  영역도 가지고 라인적 요소도 있는 것
+iframe video source map input img embed audio track
+button
+
+
+block 속성 공간 분할 태그 - 구역을 나눈다
+div
+
+block 속성 시맨틱(공간 분할 태그) 
+header nav section article aside main footer figure
+
+inline 속성 공간 분할 태그
+span
+
+        <h1>BRACKETS 으로 시작하기</h1>
+        <h2>이것은 당신의 가이드입니다.</h2>
+상하여백의 특징
+위아래 여백이 만나면 여백과 여백들은 상쇄가 된다. 합쳐진다.
+
+두개의 태그중 먼저 쓴게 형 태그
+나중에 쓴 태그가 동생 태크
+
+-->
+
+</body>
+</html>

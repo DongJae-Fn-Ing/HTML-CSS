@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+	<title>테두리색상</title>
+	<link rel="stylesheet" href="css/common.css">
+	<style>
+		div{
+			border-style: solid;
+			border-color: transparent; /*transparent 투명*/ 
+			/*투명으로 설정하는 것은 색을 없애는게 아니라 모양을 만들 때
+			사디리 꼴 만들 때*/
+		}
+		.box1 {border-top-color: cyan;}
+		.box2 {border-right-color: yellow;}
+		.box3 {border-bottom-color: slateblue;}
+		.box4 {border-left-color: orangered;}
+	</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+	<div class="box4"></div>
+	<p></p>
+	<style>
+		p{width: 100px; height: 100px; background-color: gold; margin: 20px;
+		border-top: 10px solid red;}
+		/* 선을 하나만 그리면
+		만나는 모서리가 없으면 사다리꼴 모양이 아니라 사각형 모양이 나온다*/
+	  /*사다리꼴을 만들려면 나 투명한 색을 입히고 하나의 변만 색을 입히면 된다.*/
+	</style>
+</body>
+</html>

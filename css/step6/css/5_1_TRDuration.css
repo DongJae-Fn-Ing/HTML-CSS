@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+}
+.durationEX1{
+    width: 100px; height: 100px; background-color: #ff0;
+ transition-duration: 2s;
+}
+/* 비포 듀레이션은 절대 변화가 일어난 다음에 넣지 말아라 
+!즉 갈떄는 여기 있으니깐 출발을 하고*/
+.durationEX1:hover{
+    width: 200px; height: 200px;
+}
+/*여기에 넣어버리면 복귀할 때 부드럽지 않는다.
+!여기서는 처음에 있는 곳을 보고 이동을 한다.*/
+.durationEX1:active{
+    background-color: #f00;
+}
+/*트랜지션 코든는 정확하게 어디에만 넣을지 생각을 해라 
+안그러면 서버 부하가 걸린다.*/
+
+.durationEX2{
+    width: 200px; height: 200px; font-size: 16px;
+    background-color: #ff6a00; padding: 30px;
+    transition-duration: 2s;
+}
+.durationEX2:hover{
+    padding: 10px; font-size: 12px;
+}
+.durationEX2:active{
+    padding: 30px; font-size: 16px;
+}
+.durationEX3{
+    position: relative; height: 23px; background-color: #808080; margin-bottom: 50px;
+}
+.durationEX3 .moveSpan{
+    background-color: #000; width: 3%; height: 23px; position: absolute;
+    transition-duration: 2s; left: 0; top: 0;
+}
+.durationEX3:hover .moveSpan{
+    left: 97%;
+}
+
+.durationEX4{
+width: 50%; height: 300px; border-width: 1px; border-style: solid;
+border-color: #f00 #ff6a00 #ffd800 #4cff00;
+transition-duration: 3s;
+}
+/*하이트 쓰지마 걍 예제용*/
+/*숫자를 기준으로 움직인다
+문자는 비효율적*/
+
+.durationEX4:hover{
+    border-color: #00ff90 #0094ff #0026ff #b220ff;
+    color: #0094ff; margin: 0 25%;
+}

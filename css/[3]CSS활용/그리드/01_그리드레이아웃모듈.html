@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout</title>
+  <style>
+    /*그리드 시스템 시안 만들때 쉽게 끌어다 써라 https://960.gs/ 컬럼넘버 12 컬럼위스 60 스피트 위스20 12그리드 시스템 */
+    /* 컬럼의 양 사이드 빈곳을 거터 거터는 여백이 지정이 된 부분 스페이스는 거터의 두배 값 */
+    /* https://1200px.com/ 그리드 시스템  현재는 이게 적절하다 */
+    /* 반응형 그리드 시스템 http://www.responsivegridsystem.com/ */
+    /* 데스크탑 12 16 24 그리드 많이씀 */
+    /* 태블릿 8 4그리드 */
+    /* 스마트폰 1 2 4그리드 */
+
+    /* 부트스트랩 https://getbootstrap.kr  css프레임워크*/
+    /* 마테리얼 라이즈 https://materializecss.com/  css 프레임워크 */
+    /* 960 >> 부트스트랩 >>마테리얼 라이즈 */
+    .item1{
+      grid-area: header;
+    }
+    .item2{
+      grid-area: menu;
+    }
+    .item3{
+      grid-area: main;
+    }
+    .item4{
+      grid-area: right;
+    }
+    .item5{
+      grid-area: footer;
+    }
+    /* 내가 이름을 지정을 해주고 */
+    .grid-container{
+      display: grid; /* 그 아래 자식들을 그리드로 쓴다 */
+      grid-template-areas:  /* 배치를 해준다 */
+      'header header header header header header'
+      'menu main main main right right'
+      'menu footer footer footer footer footer';
+      grid-gap: 10px;
+      background-color: #2196f3;
+      padding: 10px;
+       }
+       .grid-container > div{
+         background-color: rgba(255, 255, 255, 0.8);
+         text-align: center;
+         padding: 20px 0;
+         font-size: 30px;
+       }
+  </style>
+</head>
+<body>
+  <h1>Grid Layout</h1>
+
+  <ul>
+    <li>CSS 그리드 레이아웃 모듈은 행과 열이있는 그리드 기반 레이아웃 시스템을 제공하므로 플로트와 위치 지정없이 웹 페이지를 보다 쉽게 디자인 할 수 있다.</li>
+  </ul>
+  <hr>
+
+  <p>6개의 열과 3개의 행</p>
+
+  <div class="grid-container">
+    <div class="item1">Header</div>
+    <div class="item2">Menu</div>
+    <div class="item3">Main</div>
+    <div class="item4">Right</div>
+    <div class="item5">Footer</div>
+  </div>
+
+  <hr>
+  <h3>브라우저 지원 현황</h3>
+  <ul>
+    <li>크롬: 57.0+</li>
+    <li>엣지: 16.0+</li>
+    <li>파이어폭스: 52.0+</li>
+    <li>사파리: 10+</li>
+    <li>오페라: 44+</li>
+  </ul>
+</body>
+</html>

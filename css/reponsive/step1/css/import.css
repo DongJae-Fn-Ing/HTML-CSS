@@ -1,0 +1,4 @@
+@import url('reset.css');
+/*수정을 할거면 밑에 글로벌등등을 수정해라
+위에 있는 것을 밑에 있는것을 덮어쓴다*/
+@import url('global.css');

@@ -1,0 +1,12 @@
+body{
+font-family: 'Nanum Brush Script';
+}
+h1{
+    color: red;
+    text-align: center;
+}
+p{
+    color: #900;
+    text-align: center;
+}
+/*컨트롤 p눌러서 확인을 해봐*/

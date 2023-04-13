@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>열 합치기</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid #09f;
+      border-collapse: collapse;
+      padding: 10px;
+    }
+
+    th {
+      background-color: azure;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!--  테이블 작성 예-->
+  <table>
+    <caption>행 합치기: colspan="합칠 셀의 개수"</caption>
+    <tr>
+      <th>제목(레이블)</th>
+      <th>제목(레이블)</th>
+      <th>제목(레이블)</th>
+    </tr>
+    <tr>
+      <td>내용</td>
+      <td colspan="2">내용</td> <!--colspan 열을 합치겠다 옆의 영역까자 확--> 
+    </tr>
+    <tr>
+      <td colspan="2">내용</td>
+      <td>내용</td>
+      <!--큰영역을 만들고 가장 많이 필요한 셀을 만들고 나서 나중에 한번에 합친다-->
+    </tr>
+    <tr>
+      <td>내용</td>
+      <td>내용</td>
+      <td>내용</td>
+    </tr>
+
+  </table>
+  <ul>
+    <li>table : 표 생성</li>
+    <li>tr : 행(Table Row.Record)</li>
+    <li>th : 제목(Table Header)</li>
+    <li>td : 내용, 열, 데이터(Table Data)</li>
+  </ul>
+</body>
+
+<!--<colgroup>
+	<col>첫열
+	<col>두번째 열 순서대로 나온
+</colgroup>-->
+</html>

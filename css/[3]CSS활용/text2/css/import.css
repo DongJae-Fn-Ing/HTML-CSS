@@ -1,0 +1,92 @@
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none;}
+body{
+  width: 1200px; margin: 0 auto;
+}
+header{height: 100px; border: 1px solid;}
+.silidersc{height: 300px; border: 1px solid;}
+
+.contentsc{height: 200px; border: 1px solid;}
+
+footer{height: 100px; border: 1px solid;}
+
+/* 영역별 높이 */
+header div{ 
+  width: 20%; 
+  height: 100%; 
+  border-right: 1px dashed;
+  }
+  
+
+header nav:after{
+  content: ''; 
+  display: block; 
+  clear: both;}
+header nav{
+     position: relative;  
+     border: 2px solid; 
+     width: 500px; 
+     text-align: center;
+     left: 250%;
+    }
+    header nav ul li.floatul{
+    float: left; 
+    width: 24.8%; 
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    }
+    header nav ul li.floatul ul li{
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    /* 헤더임시 */
+
+    section.silidersc h2{
+      text-indent: -9999px;
+    }
+
+    section.silidersc ul li:nth-child(1){
+      background-image: url('http://wooreeweb.com/img/bg-1.jpg');
+    }
+    
+    section.silidersc ul li:nth-child(2){
+      background-image: url('http://wooreeweb.com/img/bg-2.jpg');
+    }
+    
+    section.silidersc ul li:nth-child(3){
+      background-image: url('http://wooreeweb.com/img/bg-e.jpg');
+    }
+    
+    section.silidersc ul li:nth-child(4){
+      background-image: url('http://wooreeweb.com/img/bg-4.jpg');
+    }
+    section.silidersc ul li{
+      height: 300px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: absolute; top: 0; left: 0 ;
+    }
+/* 섹션임시 */
+
+section.contentsc h2{text-indent: -9999px;}
+section.contentsc article{width: 33.33%;}
+
+section.contentsc article h3{text-indent: -9999px;}
+.tab-menu input{
+  display: none;
+}
+.tab-menu lable{
+  width: 70px; height: 30px;
+  display: inline-block;
+  border: 1px solid gray;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}

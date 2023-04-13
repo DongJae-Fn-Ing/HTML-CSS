@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>레이아웃</title>
+	<style>
+		*{margin: 0; padding: 0; box-sizing: border-box;}
+		li{list-style: none;}
+		
+		/*헤더와 풋터 영역 기본 스타일*/
+		.header,
+		.footer{
+			background-color: black;
+	    color: white;
+			padding: 20px;
+		}
+			/*컨텐츠 영역의 분리*/
+		.container .nav{width: 25%;}
+		.container .content{width: 75%;}
+	  /*100%를 조금이라도 넘으면 밑으로 떨어진다
+		만약에 안떨이저면 99.999로 만들어봐라*/
+		.container .nav ul li{
+			background-color: #3cf;
+			color: white;
+			padding: 10px;
+			border-bottom: 1px solid #eee;
+		}
+		/*고정으로 잡는다*/
+		.container .nav,
+		.container .contene{
+			float: left; padding: 10px;
+		}
+		
+		/*클리어 픽스
+		-float가 적용된 요소의 부모에 적용해야 함!*/
+		.clear:after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+		
+		.container .nav ul li:hover{
+			background-color: #9af;
+		}
+	</style>
+	<style>
+		#wrap{
+			width: 1000px; /*너비가 있어야함*/
+			margin: 0 auto; /*이거 쓰려면 너비가 있어야함 고정형 만듥*/
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+	<!--header 영역-->
+	<div class="header">
+		<h1>LOGO</h1>
+	</div>
+	
+	<!--컨텐츠 영역(사이드 내비게이션 + 컨텐츠)-->
+ <div class="container clear">
+ 	<!--사이드 네비게이션-->
+ 	<div class="nav">
+ 		<ul>
+ 			<li>메뉴1</li>
+ 			<li>메뉴2</li>
+ 			<li>메뉴3</li>
+ 			<li>메뉴4</li>
+ 		</ul>
+ 	</div>
+ 		<!--컨텐츠-->
+ 		<div class="content">
+ 		<h2>제목/슬로건</h2>
+ 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta fugit tempore earum nobis voluptatum ex vel quod modi id, quis quae quidem a odit officia architecto, vero totam suscipit quisquam?</p>
+ 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta fugit tempore earum nobis voluptatum ex vel quod modi id, quis quae quidem a odit officia architecto, vero totam suscipit quisquam?</p>
+ 		</div>
+ </div>
+	
+	<!--footer 영역-->
+	<div class="footer">
+		<h3>&copy; myLayout</h3>
+	</div>
+	</div>
+</body>
+</html>

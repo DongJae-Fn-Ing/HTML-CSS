@@ -1,0 +1,32 @@
+body{
+    height: 2000px;
+}
+.position_A{
+    position: relative; width: 150px; height: 150px;
+    background-color: #fc0; width: 150px; height: 150px;
+}
+/* reative가 없어서 바디의 절대좌표를 받았다 */
+/*단독으로 앱솔루트를 쓰는 이유가 없다*/
+/*한번 코드 실행해봐*/
+/* witdh하고 height를 없애면 너비를 가진 상태가 아니다
+왜냐 위스가 부족하면 줄바꿈이 일어나거나 충분하면 공간이 남아야 하는데
+텍스트에 딱 떨어지면 안된다 예가 div인데 블럭 속성이고 위스가 100%가 아니잖아  */
+.position_R{
+    position: relative; width: 150px; height: 150px;
+    margin: 0 auto; background-color: #0f0;
+}
+/*오른쪽은 마진 오토 레프트*/
+.position_A2{
+    position: absolute; top: 50px; left: 50px; height: 50px;
+    width: 50px; background-color: #0ff;
+}
+
+.position_F{
+    position: fixed; width: 80px; height: 80px; left: 0; 
+    top: 0; background-color: #9f9;
+}
+/*스크롤이 생겨도 고정
+해제법 포지션을 static으로 만들어주면 일반 블록으로 돌아간다
+static 취소값*/
+/* static은 포지션을 해제하고 이동성을 없애는 기존 객체 속성으로
+돌려 놓을 때 사용 한다. */

@@ -1,0 +1,55 @@
+html,
+body{
+    height: 100%;
+}
+body{
+    margin: 0; padding: 0;
+   
+    
+}
+.hed header{
+    height: 20%;
+    width: 100%;
+    background-color: red;
+    position: fixed;
+    z-index: 100;
+    color: white;
+}
+.con{
+    height: 200%;
+    position: relative;
+}
+.con aside{
+    height: 100%;
+    background-color:green;
+    width: 200px;
+    position: absolute;
+    }
+
+.con aside p{
+    margin: 0; padding-top: 90px;
+}
+
+.sss{
+    height: 100%; width: 15%;
+    background-color: black;
+    position: absolute;
+    left: 200px;
+}
+.con article{
+    margin: 0; padding: 0;
+    height: 100%; width: 100%;
+    background-color: blue;
+    position: absolute;
+    left: 330px;
+}
+.con article p{
+   margin: 0; padding-top: 80px;
+   
+}
+footer{
+    width: 100%;
+    background-color: gold;
+    text-align: center;
+    padding: 10px;
+}

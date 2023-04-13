@@ -1,0 +1,113 @@
+body{
+    width: 200px; margin: 200px auto; perspective: 400px;
+}
+div{
+    width: 200px; height: 200px; position: relative;
+    animation-name: playBox;
+    animation-iteration-count: infinite;
+    animation-duration: 13s;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;
+}
+@keyframes playBox{
+    from{
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }to{
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+div span{
+    width: 200px; height: 200px; display: block; position: absolute;
+    left: 0; top: 0;
+    opacity: 0.5;
+    backface-visibility: visible;
+}
+div span:nth-of-type(1){
+    background-color:red;
+    transform: rotateY(0deg) translate3d(0px,0px,100px);
+}
+div span:nth-of-type(2){
+    background-color:green;
+    transform: rotateY(90deg) translate3d(0px,0px,100px);
+}
+div span:nth-of-type(3){
+    background-color:blue;
+    transform: rotateY(180deg) translate3d(0px,0px,100px);
+}
+div span:nth-of-type(4){
+    background-color:yellow;
+    transform: rotateY(270deg) translate3d(0px,0px,100px);
+}
+div span:nth-of-type(5){
+    background-color:brown;
+    transform: rotateX(90deg) translate3d(0px,0px,100px);
+}
+div span:nth-of-type(6){
+    background-color:pink;
+    transform: rotateX(270deg) translate3d(0px,0px,100px);
+}
+
+
+
+
+
+/* body{
+    width: 200px; margin: 200px auto; perspective: 400px;
+}
+div{
+    width: 200px ; height: 200px;  position: relative;
+    animation-name: playBox;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-style: preserve-3d;
+}
+@keyframes playBox{
+    from{
+        transform: translateX(0deg) translateY(0deg) translateZ(0deg);
+    }to{
+        transform: translateX(360deg) translateY(360deg) translateZ(360deg);
+    }
+}
+div span{
+    width: 200px; height: 200px; display: block; position: absolute;
+    left: 0; top: 0; opacity: 0.5;
+}
+div span:nth-child(1){background-color: red; transform: rotatey(0deg) translate3d(0,0,100px); backface-visibility: hidden;}
+div span:nth-child(2){background-color: blue; transform: rotatey(90deg) translate3d(0,0,100px); backface-visibility: hidden;}
+div span:nth-child(3){background-color: green; transform: rotatey(180deg) translate3d(0,0,100px);}
+div span:nth-child(4){background-color: purple; transform: rotatey(270deg) translate3d(0,0,100px);}
+div span:nth-child(5){background-color: yellow; transform: rotateX(90deg) translate3d(0,0,100px);}
+div span:nth-child(6){background-color: black; transform: rotateX(270deg)translate3d(0,0,100px);} */
+
+/*밑에 두면 y축으로 돌리면 같힌다*/
+/*기본 완성시 너를 잡아서 흔들린다 3명 정도가 너를 동시에 당긴다 한명을 제외한 나머지
+두명이 동시에 당기는데 힘이 일정하고 동시에 힘이 가해지니? 아니지 어느 한쪽으로
+쏠리지 못하고 갈려다가 돌아오고 이런식 
+그래서 각축마다 효과를 힘을 줘야한다*/
+/*원근감을 주는 태그 퍼스택 태그! 통동이의 부모 즉 스케치에 준다
+perspective 수치를 넣어봐
+위드값 만큼 넣어줘도 어지러우니
+기존 위드값의 두배를 넣어줘라
+backface-visibility: hidden; 이면 가시성
+오퍼시티가 없으면 작동을 안하다
+즉 뒷면이 안보인다*/
+
+
+/*  
+    transform-origin이 설정 되어있지 않기 때문에 모든 종이는 가운데를 중심으로 작동하게 된다.    
+    first-of-type :  각도없이 z축으로만 100픽셀 만큼 이동 하게 된다.
+    nth-of-type(2) : 90도의 각을 가진 상태로 z축으로 100픽셀 만큼(면의 절반) 이동 하게된다.
+    nth-of-type(3) : first-of-type와 같아보이지만 180도 회전한 상태로 기준점이 반대가 됨으로, z축에서 100px 이동하는것이 first-of-type와는 반대 방향으로 이동하게된다.
+    nth-of-type(4) : 마찬가지로 nth-of-type(2)가 180도 회전한 상태로 기준점이 반대가 됨으로, z축에서 100px 이동하는 것이 nth-of-type(2)와는 반대 방향으로 이동하게 된다.
+    nth-of-type(5) : x축으로 90도 만큼 회전하여 z축으로 100픽셀 만큼 이동 하게 된다.(아래로)
+    last-of-type :  x축으로 270도 만큼 회전하여 (nth-of-type(5) 가 180도 회전한 상태) z축으로 100픽셀 만큼 이동 하게 된다.(위로)
+    ?perspective
+    ! 대상 면적 x2가 적당. 너무 높은 값 자제. (2000px정도 limit) 대상3D구현너비
+    ?transform-style
+    todo flat : 자식요소의 3차원 속성 무시.
+    * preserve-3d 자식요소의 3차원 속성 유지.  translate3d(X,Y,Z) 지정된 크기만큼 이동한다.
+    ?backface-visibility(이면가시성)
+    *visible : default. 이면을 보이겠다.
+    *hidden : 이면을 보이지 않겠다.
+*/

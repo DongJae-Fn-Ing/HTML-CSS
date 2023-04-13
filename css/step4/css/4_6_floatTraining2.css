@@ -1,0 +1,19 @@
+*{
+    margin: 0; padding: 0;
+}
+ul li{
+    width: 16.66%; float: left;
+    display: block; border: 1px solid black;
+    box-sizing: border-box;
+}
+/* 원래는 다들어간다*/
+ul li figure img{
+    width: 100%; display: block;
+}
+
+/* 이미지와 dl 사이에 발생하는 흰 실선 오류 제거
+display: block;  */
+
+ul li dl{
+text-align: center; background-color: yellow;
+}

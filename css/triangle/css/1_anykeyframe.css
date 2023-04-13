@@ -1,0 +1,77 @@
+/*step6에 깃의 그라데이션 넣어서 공부해라*/
+
+*{
+    margin: 0; padding: 0;
+}
+body{
+    position: relative;
+}
+.circle{
+    position: absolute;
+    width: 200px; height: 200px;
+    background: linear-gradient(#cb60b3 0%, #db36a4 100%);
+    text-align: center;
+    border-radius: 100px; 
+    animation-name: moveCircle;
+    animation-duration: 2s; /*속성이 진행시간*/
+    animation-timing-function: linear; /*기속도*/
+    animation-iteration-count: infinite; /*횟수반복 무한도 가능 인피니트*/
+    animation-direction: alternate; /*알아서 움직임 스태틱==노멀*/
+}
+@keyframes moveCircle{
+   from{
+   left: 0; transform: rotate(0deg);
+   /* transform: rotate(0deg); 회전 만들기 */
+   }
+   /* 50%{
+   left: 500px; 왕복을 만들기 위해 중간 값을 만들고 듀레이션 값 2배 */
+   /* transform: rotate(360deg);    */
+   /* } */
+   to{
+   left: 500px; /*left 0*/ transform: rotate(360deg);
+   /* transform: rotate(0deg);    */
+   }
+
+}
+
+
+/* 0% 100%로도 가능 바꿀수 있다*/ 
+/*소수점 두자리까지 %사용가능
+만가지의 경우를 만들 수 있다.*/
+/*니가 명을 지정 @keframes name*/
+/*@ 골뱅이가 찍히면 외부 기능을 끌어다 쓴다*/
+/*너가 이렇게 만드는 걸 키프레임
+이거 두개 만들어 그사이의 값을 알아서 만드는게 트레이닝
+완성한 것을 프레임*/
+
+/* 
+    ? animation
+    * 1. moveCircle이라는 이름의 keyframes를 호출.
+    * 2. duration으로 재생시간을 설정.
+    * 3. timing-function 으로 가속도 설정.
+    * 4. iteration-count 로 무반한복 설정.
+    ! 반복횟수를 숫자로 입력해도 가능.
+    * 5. direction으로 재생 방향 설정.
+    todo normal 표준재생(0-100%)
+    todo alternate 왕복재생 (0-100%,100%-0)
+    todo alternate-reverse alternate역방향재생
+*/
+
+/* 
+    ?keyframes
+    * 0 ~ 100% 사이 소수점 포함 입력 가능
+    * keyframe start = from, end = to, 나머지는 %
+    ! ex> 0 - 50% - 100% (위 예제)
+    *  rotate는 회전속성, deg는 각도를 뜻한다.
+*/
+
+
+
+.circle h1{
+    line-height: 200px;
+}
+
+.circle:hover{
+    animation-play-state: paused; cursor: pointer;
+}
+/* paused 중지 running 재생 */

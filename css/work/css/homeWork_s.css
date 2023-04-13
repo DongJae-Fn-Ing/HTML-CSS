@@ -1,0 +1,59 @@
+html,
+body{
+    height: 100%;
+    
+}
+body{
+    margin: 0; padding: 0;
+      }
+header{
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: red;
+    color:white
+    }
+
+section{
+    margin: 0; padding: 0;
+    height: 200%;
+    position: relative;
+}
+}
+
+section h2{
+margin: 0; padding: 0;
+}
+
+section aside{
+    
+    background-color: green;
+    
+}
+.base{
+  
+    background-color: black;
+    position: relative ;
+    left: 250px; top: -441px
+      
+}
+section article{
+    
+    background-color: blue;
+    position: relative;
+    left: 350px; top: -901px;
+}
+footer{
+    
+    background-color: gold;    
+    height: 50px;
+    margin: 0;
+    padding: 0;
+   }
+footer p{
+    text-align: center;
+    margin: 0;
+    height: 2000px;
+    padding: 10px;
+    }

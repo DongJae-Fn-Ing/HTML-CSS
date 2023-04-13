@@ -1,0 +1,28 @@
+*{
+    margin: 0; padding: 0;
+}
+
+ul::after{
+    content: ''; display: block; visibility: hidden;
+    clear: both;
+}/*굳이 안써도 상관 없는지?*/
+
+ul li{
+    width: 16.66%; float: left; border: 1px solid black;
+    display: block; box-sizing: border-box;
+    }
+ul li figure img,
+ul li figure figcaption{
+    width: 100%;
+    line-height: 0;
+}
+
+ul li figure dl{
+    background-color: yellow;
+    line-height: 16px;
+} /*14픽셀 어디서 가지고 있는 dl이 가지고 있는 값? */
+
+ul li figure figcaption dl dt,
+ul li figure figcaption dl dd{
+    text-align: center;
+    }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>트랜지션활용</title>
+	<style>
+		*{
+			margin: 0; padding: 0;
+			box-sizing: border-box;
+		}
+		html, body{height: 100%;}
+		.wrap {height: 100%; position: relative;}
+		.box{
+			width: 100px; height: 100px;
+			border: 1px solid;
+			text-align: center; line-height: 100px;
+			position: absolute;
+			top: 50%; margin-top: -50px; /*역마진*/ 
+			left: 50%; margin-left: -50px; /*역마진*/
+			cursor: pointer; /*앵커태그와 같이 마우스 커서를 손가락으로 바꾸는 태그*/
+			transition: all 1s 0.5s;
+		} /*이러한 버튼 명칭을 고스트버튼 배경이 투명하거나
+		배경가 일체화 얇은 두께의 선으로 이용한다.*/
+		/*높이 지정이 없으면 자식의 컨텐츠 양에 따라 결정*/
+		.box:hover{
+			width: 300px; height: 300px;
+			margin-top: -150px; margin-left: -150px; /*수치를 바꿔줘야 가운데*/
+			line-height: 300px; /*수치를 바꿔줘야 가운데*/
+			font-size: 3em;
+			background-color: gold;
+		}
+	</style>
+	<style>
+		.box:hover{
+			border-radius: 50%;
+			border-color: transparent;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box">HELLO</div>
+	</div>
+</body>
+</html>

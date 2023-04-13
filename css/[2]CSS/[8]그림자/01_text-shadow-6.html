@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>글자 그림자(text-shadow)</title>
+	<style>
+		h1{
+			font-family: impact; /*강조 효과의 텍스트*/
+			text-transform: uppercase;
+			letter-spacing: 2px; 
+			text-align: center; 
+			display: table-cell; /*바디요소를 가상의 테이블로 인식시키기 h1은 셀로 인식*/
+			vertical-align: middle; /*이미지 폼태그 표에서만 사용가능 수직 수평정렬*/
+			font-size: 20vmin; /*뷰포트 최솟값*/ /*뷰포트 너비 와 높이중 높은 거 대한 20% 크기만큼*/
+		}
+		body{
+			display: table; /*테이블로 인식*/
+			background-color: #000;
+		}
+		html,body,h1{height: 100%; width: 100%;}
+	</style>
+	<style>
+		h1{
+			text-shadow: 
+				0 0 5px #ccc,
+				0 -5px 10px #ff4,
+				2px -10px 15px #fd3, /*부드럽게 색이 섞는다*/
+				2px -15px 20px #f80,
+				2px -20px 25px #f60,
+				2px -25px 30px #f30,
+				3px -30px 30px #f10,
+				3px -35px 35px #f00;
+			/*한계가 없다 얼마든지 , 찍어서 써라*/
+			/*이런거는 그림으로 그리는게 빠르다*/
+		}
+	</style>
+</head>
+<body>
+	<h1>passion</h1>
+</body>
+</html>

@@ -1,0 +1,52 @@
+
+body div fieldset{
+    border: 2px solid midnightblue; 
+    border-radius: 10px;  width: 460px;
+    margin: 0 auto;
+}
+body div fieldset legend{
+background-color: midnightblue; color: white;
+border-radius: 5px; padding: 10px; font-weight: bold;
+}
+body div fieldset ul:after{
+    content: ''; display: block; visibility: hidden; clear: both;
+}
+body div fieldset ul{
+   margin: 0; padding: 0;
+}
+
+body div fieldset ul li:last-child{
+    float: right;
+}
+body div fieldset ul li{
+    display: block; margin: 10px 10px 10px 0; 
+}
+
+body div fieldset ul li label{
+    margin: 10px 10px 10px 0; 
+}
+
+body div fieldset ul li input:not(:nth-child(3)){
+    vertical-align: middle; margin-left: 15px;
+}
+
+
+body div fieldset input[type='submit']{
+   width: 45%; background-color: midnightblue; color: white;
+   line-height: 25px; font-weight: bold;
+}
+body div fieldset input[type='reset']{
+    width: 45%; background-color: darkred; color: white;
+    line-height: 25px; float: right; font-weight: bold;
+}
+
+fieldset ul li > *:not(label):hover{
+background-color: #949494;
+}
+
+
+body div fieldset input[type='checkbox']:checked + label{
+     display: inline-block; vertical-align: middle;
+background-color: mediumpurple; color: white;
+font-weight: bold; border-radius: 5px;}
+

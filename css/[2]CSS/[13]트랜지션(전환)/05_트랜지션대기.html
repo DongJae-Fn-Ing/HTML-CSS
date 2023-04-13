@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>트랜지션</title>
+	<link rel="stylesheet" href="css/common.css">
+	<style>
+		.wrap{
+			width: 400px; height: 600px;
+			border: 1px solid silver;
+		}
+		.wrap:hover > div{/* 부모영역에 마우스 커서가 올라가면 자식한테*/
+			width: 400px;
+			background-color: crimson;
+		}
+		/*div:hover를 주면 따로따로 효과를 줄 수 있다*/
+		div{transition: all 3s;}
+	</style>
+	<style>
+		.box1 {transition-delay: 0s;} /*지연시간*/
+		.box2 {transition-delay: 1s;}
+		.box3 {transition-delay: 2s;}
+		.box4 {transition-delay: 3s;}
+		.box5 {transition-delay: 4s;}
+		.box6 {transition-delay: 5s;}
+	</style>
+<!--	대기시간
+	transition-delay 시간
+	0.5s = 0.5초 500ms
+	1s= 1000ms-->
+	
+</head>
+<body>
+	<section class="wrap">
+	<!--h2나 h3가 있어야한다-->
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div class="box4"></div>
+		<div class="box5"></div>
+		<div class="box6"></div>
+	</section>
+</body>
+</html>

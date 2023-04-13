@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>선형그라디언트(linear-gradient)</title>
+	<style>
+		*{margin: 0; padding: 0;}
+		body{
+			background-image: url('http://wooreeweb.com/img/grid.gif');
+		}
+		div{
+			width: 500px; height: 200px;
+			/*background-color: gold;*/
+			background-image: url('http://wooreeweb.com/img/bg-1.jpg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	</style>
+	<style>
+		.box1{background-image: linear-gradient(red 20%, transparent);}
+		.box2{background-image: linear-gradient(90deg, transparent, blue 60%);}
+	</style>
+</head>
+<body>
+<!--백그라운드 이미지 중첩 불가능 그래서 멀티 씀-->
+	<div class="box1"></div>
+	<div class="box2"></div>
+</body>
+</html>

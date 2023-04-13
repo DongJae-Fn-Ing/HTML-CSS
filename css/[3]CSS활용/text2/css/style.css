@@ -1,0 +1,129 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none; color: white;}
+h3{display: none;}
+body *{box-sizing: border-box;}
+.flot{float: left;}
+.clearfix{
+  content: ''; display: block; clear: both;
+}
+/* 고민을 해봐
+이렇게 해야 한번에 유지 보수 하기 편해 */
+
+
+
+.wrap{width: 1200px; margin: 0 auto;}
+header{height: 100px;}
+.div{height: 300px;}
+.frame{height: 150px; background-color: darkblue;}
+.imgslider{height: 150px;}
+section{height: 200px;}
+footer{height: 100px;}
+
+
+header{background-color: blue;}
+
+section{background-color: #FFF;}
+footer{background-color: darkblue;}
+
+/* 헤더 */
+header{padding-top: 20px;}
+/* 이미지에 마진 탑을 줘도 상관없다 */
+/* margin을 주변 것이 밀린다 */
+header h1 img{width: 200px;}
+/* 1차메뉴 */
+#nav{width: 1000px; position: relative; }
+#gnb{position: absolute; right:-170px; width: 50%;
+height: 40px; z-index: 9000px; background-color: darkblue;}
+#gnb > li{
+  width: 25%; height: 100%;
+}
+#gnb > li > a{
+  border: 1px solid; display: block;
+  text-align: center; line-height: 40px;
+  border-right: none; font-weight: 700;
+}
+#gnb > li:last-child > a{
+  border-right: 1px solid;
+}
+#gnb > li:hover > a{
+  background-color: white; color: black;
+}
+/* li a와 영역이 같을 때는 그냥 왠만하면 그냥
+a에 해하 */
+
+/* 2차메뉴 */
+.sub{
+  background-color: blue;
+}
+.sub li a{
+  display: block; text-align: center; line-height: 40px;
+}
+.sub li:hover a{
+  background-color: white; color: black;
+}
+
+/* 이미지 슬라이더 */
+
+.imgslider{width: 100%;}
+.bg-1{background-image: url('http://wooreeweb.com/img/bg-1.jpg');}
+.bg-2{background-image: url('http://wooreeweb.com/img/bg-2.jpg');}
+.bg-3{background-image: url('http://wooreeweb.com/img/bg-3.jpg');}
+.div{width: 100%; }
+.slider-img{
+  position: absolute; 
+  width: 100%;height: 100%;
+  top: 0; left: 0;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center;
+}
+.imgslider{position: relative; height: 100%;}
+
+/* 공지사항 */
+.menu{width: 100%;position: relative; }
+.post1{width: 400px; height: 100%; float: left; 
+}
+.post1 span{
+  width: 80px; height: 40px; border-top: 1px solid; border-left: 1px solid;border-right: 1px solid; text-align: center;
+  background-color: slateblue;
+}
+.menu .post1 .tt{
+  border: 1px solid; height: 180px; padding-top: 20px; background-color:dodgerblue;
+}
+.menu .post1 .tt li{text-align: center; line-height: 30px;}
+
+/* 갤러리 */
+.menu .gl{
+  width: 400px; height: 100%; float: left;}
+.gl span{  width: 80px; height: 40px; border-top: 1px solid; border-left: 1px solid;border-right: 1px solid; text-align: center;
+  background-color: slateblue; }
+.menu .gl .gsl{
+  border: 1px solid; height: 180px; padding-top: 20px; background-color: dodgerblue;
+}
+.menu .gl .gsl img{
+  width: 120px; display: block;
+}
+.menu .gl .gsl img:not(:last-child){
+  margin-right: 19px;
+}
+
+/* 배너 */
+.ban{
+  border: 1px solid; width: 400px; height: 180px; padding-top: 20px; float: left; position: relative; top: 21px; text-align: center; background-color: dodgerblue;
+}
+
+footer{width: 100%; line-height: 100px;}
+footer h2{width: 200px; display: block; border-right: 1px dashed;}
+.copy{
+  width: 700px; height: 100px; text-align: center; border-right: 1px dashed;
+}
+.cas{ width: 300px; height: 100px; text-align: center;}
+
+/* 바텀을 줬는데 안내려가고 위로 올라가면
+부모값이 높이 값이 없는 거다  맨위에가
+바텀이자 높이가 된 것이다.
+*/
+/* 부모값이 높이가 없으면 자식의 높이 값을 가진다 */
+/* 그러나 자식을 앱솔루트로 만들면 자식이 밖으로 나가 부모의 높이가 없어지고 0이 된다. */

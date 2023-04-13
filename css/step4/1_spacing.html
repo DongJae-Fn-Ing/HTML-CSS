@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css spacing</title>
+    <link rel="stylesheet" href="css/1_spacing.css">
+</head>
+
+<body>
+    <!-- 이론
+
+    컨텐츠가 있고 그 밖은 스테이스 또 그 밖은 패팅
+    또 그 밖은 보더 
+    패딩과 보더는 위스 즉 넓이에 영향을 준다 
+    border css를 적용하면 사각형의 크기가 다른다.
+    마진은 위스에 관여를 못한다
+    보더끼리는 외부거리 
+    보더와 패딩은 실제 수치만을 기반
+    마진은 동위 선상 라인에 라인에 잇는 공간들끼리
+    밀어내고 당기는 것
+
+    패딩은 살을 찌운다 개념
+    마진은 안에 늘어난다
+    
+    그래서 마진을 조절 해주면 위험요소가 충돌이 난다 
+    밑에 값 마진이랑 아래값 마진이랑 ex) 윗마진 10px 
+    아랫마진 10px이면 합으로
+    20이 나와야 하는데 10px으로 나온다
+    
+    마진에서는 축당 한뱡으로 씩으로 쓴다
+    위에서 아래는 바텀만 쓰고 탑을 쓰질 않는게 팁
+    눈으로 보여줘야 하는 값은 -값을 쓰질 않는다.
+    하지만 위드 값에서는 라이트 오른쪾으로 값을 줘야 할 것 같은데
+    수치가 불안전해서 마진을 왼쪽으로 민다 즉 레프트만 써라
+    바텀이랑 레프트만 쓰는게 정신 건강에 좋다 -->
+    <div class="firstDiv">
+        첫번째 Div
+        <!-- 공간 설정 부재로 인한 margin-bottom 삽입불가 -->
+        <article>
+            첫번쨰 Div 내에 article
+        </article>
+    </div>
+        <div class="secondDiv">
+            두번째 Div
+            <article>
+                두번째 Div 내 article
+            </article>
+        </div>
+        <div class="centerDiv">
+            중앙에 위치하는 Div
+            <article>
+                중앙 Div 내에 article
+            </article>
+        </div>
+        <div class="paddingDiv">
+            <p>
+                padiing이 적용된 Div
+            </p>
+            <article>padding 적용된 Div 내에 article</article>
+            <article>padding 적용된 Div 내에 article</article>
+            <article>padding 적용된 Div 내에 article</article>
+        </div>
+    
+</body>
+
+</html>

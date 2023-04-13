@@ -1,0 +1,73 @@
+/*미디어 쿼리 화면 사이즈에 따라 설정을 다르게 할 수 있다
+아래서 위로 친다 작은 것부터 코드를 친다*/
+
+
+@media screen and (max-width: 767px) and (orientation: landscape){
+    html{
+        background-color: palegreen; color: white; font-weight: bold;
+    }
+    h1{
+        font-size: 1rem; text-align: center; line-height: 2rem;
+    }
+    p{
+        font-size: 0.75rem; text-align: center; line-height: 1rem;
+    }
+    }
+
+@media screen and (max-width: 767px) and (orientation: portrait){
+html{
+    background-color: red; color: white; font-weight: bold;
+}
+h1{
+    font-size: 1rem; text-align: center; line-height: 2rem;
+}
+p{
+    font-size: 0.75rem; text-align: center; line-height: 1rem;
+}
+}
+/*우리나라에서는 최솟값(민위스)을 잡지 않는다 나라마다 다르다*/
+/*랜드스케이프 공유*/
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+    html{
+        background-color: red; color: purple;
+        font-weight: bold;
+    }
+    h1{
+        font-size: 2rem; line-height: 3rem;
+    }
+    p{
+        font-size: 1rem; text-align: left; line-height: 1.5rem;
+    }
+}
+/*orientation: landscape 회전시*/
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
+    html{
+        background-color: greenyellow; color: white;
+        font-weight: bold;
+    }
+    h1{
+        font-size: 2rem; line-height: 3rem;
+    }
+    p{
+        font-size: 1rem; text-align: right; line-height: 1.5rem;
+    }
+}
+
+/*orientation: portrait 기본*/
+
+/* Tablet Device - 사용자 해상도가 768px 이상 1025px 미만 일 때 이 코드가 실행됨.  태블릿 코드를 작성한다.*/
+@media screen and (min-width: 1025px){
+    html{
+        background-color: blue; color: white;
+        font-weight: bold;
+    }
+    h1{
+        font-size: 2rem; line-height: 3rem;
+    }
+    p{
+        font-size: 1rem; text-align: right; line-height: 1.5rem;
+    }
+}
+/*Desktop Device - 사용자 해상도가 1025 이상일때 이 코드가 실행됨. pc 코드를 작성한다.*/
+/*f12 토글 디바이스 클릭*/

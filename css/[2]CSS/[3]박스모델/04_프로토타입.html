@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>04_프로토타입</title>
+	<style>
+		*{margin: 0; padding: 0;}
+		body{
+			background-image: url('http://wooreeweb.com/img/grid.gif');
+		}
+	</style>
+	<style>
+		.wrap{width: 100%;}
+		header,
+		.container,
+		footer{
+			width: 960px; margin: 0 auto;
+			height: 100px;
+			border: 1px solid gray;
+			background-color: #adc6ec;
+		}
+		#headerWrap,
+		#footerWrap{
+			background-color: #abc6ec;
+		}
+		.container{margin: 20px auto;}
+		/*부모요소 100%로 쓰고 자식요소는 일부분만 쓰는게 html구성요소*/
+	</style>
+</head>
+<body>
+<div class="wrap">
+<!--(1) 헤더-->
+	<div id="headerWrap">
+		<header>헤더영역</header>
+	</div>
+<!--	(2) 컨텐츠-->
+	<div class="container">
+		<main>메인 컨텐츠</main> <!--페이지에 메인 콘텐츠를 표시 할 떄 사용 html에서 한번만 쓸 수 있다.-->
+	</div>
+<!--(3) 풋터	-->
+	<div id="footerWrap">
+		<footer>풋터 영역</footer>
+	</div>
+</div>	
+</body>
+</html>

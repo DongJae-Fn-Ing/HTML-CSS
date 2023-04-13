@@ -1,0 +1,22 @@
+div{
+    width: 200px; height: 200px;
+    border: 5px black solid; margin: 0 auto;
+}
+div span{
+    width: 200px; height: 200px; display: block;
+    transform-origin: left top;/*전체 좌측상단 기준으로 설정*/
+}
+
+div:nth-of-type(1) span{background-color: red; transform: rotate(10deg);}
+div:nth-of-type(2) span{background-color: blue; transform: rotate(10deg)translatex(100px);}
+/*중심 점도 움직이기 때문에 회전을 먼저 주지말고 바꿔서 쓴다
+즉 앞뒤로 바꾸면 순서를 바꿔서 적용가능*/
+div:nth-of-type(3) span{background-color: green; transform: rotate(10deg) translate(100px,50px) ;}
+/*translatex(100px) translateY(50px)*/ 
+div:nth-of-type(4) span{background-color: purple; transform: rotate(10deg) translate(100px,50px) skewx(10deg);}
+/*skewx 한면인데 경사각을 준 것 처럼 만들기*/
+div:nth-of-type(5) span{background-color: pink; transform: rotate(10deg) translate(100px,50px) skew(10deg,10deg) ;}
+div:nth-of-type(6) span{background-color: silver; transform: rotate(10deg) translate(100px,50px) skew(10deg,10deg)scaleX(1.2);}
+/*스케일은 원근감을 주는것*/
+div:nth-of-type(7) span{background-color: yellow; transform: rotate(10deg) translate(100px,50px) skew(10deg,10deg)scale(1.2,1.2);}
+/*원래 기준좌표 좌측상단*/

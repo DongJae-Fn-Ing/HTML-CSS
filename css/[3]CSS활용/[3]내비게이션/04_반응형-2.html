@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형</title>
+<style>
+  *{margin: 0; padding: 0;}
+  li{list-style: none;}
+  a{text-decoration: none; color: #222;}
+
+  nav{width: 200px;}
+  nav ul{width: 100%; background-color: #eee;}
+  nav ul li a{display: block; padding: 10px;}
+
+  nav ul li a.on{
+    background-color: orangered; color: #fff;
+  }
+  nav ul li a:hover:not(.on){
+    background-color: #000; color: #fff;
+  }
+</style>
+<style> 
+nav{
+  position: fixed; 
+  height: 100%; 
+  overflow: auto;
+}
+nav ul{height: 100%;}
+
+.container{
+  padding-left: calc(200px + 10px);
+}
+</style>
+<style>
+  /* 반응형 미디어쿼리 */
+  @media screen and (max-width: 900px){
+    nav{width: 100%; position: relative;
+    height: auto;}
+    nav ul.top-gnb li{float: left;}
+    nav ul.top-gnb li li a{padding: 20px;}
+    .container{padding-left: 0;}
+  }
+  .clear:after{
+    content: ''; display: block; clear: both;
+  }
+
+  @media screen and (max-width: 480px){
+    nav ul.top-gnb li{float: none;}
+  }
+</style>
+</head>
+<body>
+  <nav>
+    <ul class="clear top-gnb">
+      <li class="right"><a href="#" class="on">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
+      <li><a href="#">메뉴4</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit, cum laboriosam odit aut in, veritatis eos facilis assumenda fugit doloribus eius maxime consectetur eum, ab voluptatem obcaecati at ducimus?</p>
+  </div>
+  <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+  <script>
+    $( function(){
+
+      $('a').click(function(){
+        $('a').removeClass('on');
+        $(this).addClass('on');
+      });
+    }
+    );
+  </script>
+</body>
+</html>
